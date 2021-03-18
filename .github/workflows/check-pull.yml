@@ -1,11 +1,14 @@
-name: Check
+name: Check and Pull Dependencies
 
 on:
-  pull_request:
+  push:
+    branches:
+      - master
+    tags-ignore: [ v.* ]
 
 jobs:
-  check:
-    name: Check
+  check-pull:
+    name: Check and Pull Dependencies
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -27,5 +30,8 @@ jobs:
       - name: Cache Coursier cache
         uses: coursier/cache-action@v5
 
-      - name: Check scalafmt rules, publish BOM locally
-        run: sbt checkBom
+      - name: Check scalafmt rules, pull dependencies, publish BOM successfully
+        env:
+          BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+          BINTRAY_PASS: ${{ secrets.BINTRAY_PASS }}
+        run: sbt checkPullBom
