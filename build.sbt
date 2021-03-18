@@ -26,4 +26,4 @@ lazy val `akka-platform-dependencies` =
       publishM2Configuration := publishM2Configuration.value.withOverwrite(true)
     )
 
-addCommandAlias("checkBom", ";scalafmtSbt;+update;+akka-platform-dependencies/billOfMaterials:publishM2")
+addCommandAlias("checkBom", ";scalafmtSbtCheck;+update;+akka-platform-dependencies/billOfMaterials:publishM2")
