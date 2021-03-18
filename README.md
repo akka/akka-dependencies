@@ -10,7 +10,10 @@ Usage:
 
 Add a `dependencyManagement` `dependency` to your `pom.xml`:
 
-```
+```xml
+    <properties>
+        <akka-platform.version>1.0.0</akka-platform.version>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -24,9 +27,11 @@ Add a `dependencyManagement` `dependency` to your `pom.xml`:
     </dependencyManagement>
 ```
 
-Reference one or more Akka components by their organization and artifact name only in your dependencies. Ex:
+Reference one or more Akka components by their organization and artifact name only in your Maven or Gradle dependencies. 
 
-```
+Maven Ex)
+
+```xml
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-cluster-typed_2.13</artifactId>
