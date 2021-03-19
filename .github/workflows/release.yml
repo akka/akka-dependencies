@@ -30,6 +30,12 @@ jobs:
       - name: Cache Coursier cache
         uses: coursier/cache-action@v5
 
+      - name: Check scalafmt rules, pull dependencies, publish BOM locally successfully
+        env:
+          # FIXME: required to access commercial lightbend releases, but not for much longer.
+          BINTRAY_TOKEN: ${{ secrets.BINTRAY_TOKEN }}
+        run: sbt checkPullBom
+
       - name: Sonatype release
         env:
           PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
