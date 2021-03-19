@@ -1,14 +1,12 @@
-name: Check and Pull Dependencies
+name: Release to Sonatype
 
 on:
   push:
-    branches:
-      - master
-    tags-ignore: [ v.* ]
+    tags: [ v.* ]
 
 jobs:
   check-pull:
-    name: Check and Pull Dependencies
+    name: Release to Sonatype
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -30,8 +28,11 @@ jobs:
       - name: Cache Coursier cache
         uses: coursier/cache-action@v5
 
-      - name: Check scalafmt rules, pull dependencies, publish BOM successfully
+      - name: Sonatype release
         env:
-          # FIXME: required to access commercial lightbend releases, but not for much longer.
-          BINTRAY_TOKEN: ${{ secrets.BINTRAY_TOKEN }}
-        run: sbt checkPullBom
+          PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+          PGP_SECRET: ${{ secrets.PGP_SECRET }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          CI_SONATYPE_RELEASE: sonatypeReleaseAll
+        run: sbt ci-release
