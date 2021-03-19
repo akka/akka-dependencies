@@ -2,8 +2,6 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val AkkaPlatformDependencies = "1.0.0"
-
     val Scala213           = "2.13.5"
     val CrossScalaVersions = Seq(Scala213)
 
@@ -67,7 +65,8 @@ object Dependencies {
     "com.typesafe.akka" %% "akka-http-jackson"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-testkit"    % AkkaHttp,
-    "com.typesafe.akka" %% "akka-http-xml"        % AkkaHttp
+    "com.typesafe.akka" %% "akka-http-xml"        % AkkaHttp,
+    "com.typesafe.akka" %% "akka-http2-support"   % AkkaHttp
   )
 
   val akkaManagement = Seq(
