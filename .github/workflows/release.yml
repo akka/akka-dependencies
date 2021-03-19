@@ -2,7 +2,9 @@ name: Release to Sonatype
 
 on:
   push:
-    tags: [ v.* ]
+    # non-tag merge to main will release a SNAPSHOT
+    branches: [main]
+    tags: ["v.*"]
 
 jobs:
   check-pull:
