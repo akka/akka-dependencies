@@ -97,11 +97,9 @@ object Dependencies {
   )
 
   val akkaPersistencePlugins = Seq(
-    "com.typesafe.akka" %% "akka-persistence-cassandra"          % AkkaPersistenceCassandra,
-    "com.typesafe.akka" %% "akka-persistence-cassandra-launcher" % AkkaPersistenceCassandra,
-    // FIXME: couchbase hasn't been published for a release version of Scala 2.13
-    //"com.lightbend.akka" %% "akka-persistence-couchbase" % AkkaPersistenceCouchbase,
-    "com.lightbend.akka" %% "akka-persistence-jdbc" % AkkaPersistenceJdbc
+    "com.typesafe.akka"  %% "akka-persistence-cassandra"          % AkkaPersistenceCassandra,
+    "com.typesafe.akka"  %% "akka-persistence-cassandra-launcher" % AkkaPersistenceCassandra,
+    "com.lightbend.akka" %% "akka-persistence-jdbc"               % AkkaPersistenceJdbc
   )
 
   val alpakka = Seq(
