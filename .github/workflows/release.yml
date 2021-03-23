@@ -4,10 +4,10 @@ on:
   push:
     # non-tag merge to main will release a SNAPSHOT
     branches: [main]
-    tags: ["v.*"]
+    tags: [ v.* ]
 
 jobs:
-  check-pull:
+  release:
     name: Release to Sonatype
     runs-on: ubuntu-18.04
     steps:
