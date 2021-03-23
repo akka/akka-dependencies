@@ -1,16 +1,13 @@
-name: Release to Sonatype
+name: Release
 
 on:
   push:
-    # non-tag merge to main will release a SNAPSHOT
-    branches:
-      - main
-    tags:
-      - 'v.*'
+    branches: [main]
+    tags: ["*"]
 
 jobs:
-  release:
-    name: Release to Sonatype
+  publish:
+    name: Publish to Sonatype
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
