@@ -7,6 +7,7 @@ lazy val `akka-platform-dependencies` =
       crossScalaVersions := Versions.CrossScalaVersions,
       scalaVersion := Versions.Scala213,
       organization := "com.lightbend.akka",
+      sonatypeProfileName := "com.lightbend",
       name := "akka-platform-dependencies",
       description := s"${description.value} (depending on Scala ${CrossVersion.binaryScalaVersion(scalaVersion.value)})",
       homepage := Some(url("https://akka.io/")),
