@@ -16,7 +16,7 @@ object Dependencies {
     val AkkaEnhancements         = "1.1.16"
     val Alpakka                  = "2.0.2"
     val AlpakkaKafka             = "2.0.7"
-    val Telemetry                = "2.14.6"
+    val Telemetry                = "2.15.0"
   }
 
   import Versions._
@@ -127,6 +127,7 @@ object Dependencies {
     "com.lightbend.cinnamon"  % "cinnamon-akka-http-spi"                    % Telemetry,
     "com.lightbend.cinnamon" %% "cinnamon-akka-persistence"                 % Telemetry,
     "com.lightbend.cinnamon"  % "cinnamon-akka-persistence-spi"             % Telemetry,
+    "com.lightbend.cinnamon" %% "cinnamon-akka-projection"                  % Telemetry,
     "com.lightbend.cinnamon"  % "cinnamon-akka-spi"                         % Telemetry,
     "com.lightbend.cinnamon" %% "cinnamon-akka-stream"                      % Telemetry,
     "com.lightbend.cinnamon"  % "cinnamon-akka-stream-spi"                  % Telemetry,
