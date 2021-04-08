@@ -16,7 +16,7 @@ object Dependencies {
     val AkkaEnhancements         = "1.1.16"
     val Alpakka                  = "2.0.2"
     val AlpakkaKafka             = "2.0.7"
-    val Telemetry                = "2.14.6"
+    val Telemetry                = "2.15.0"
   }
 
   import Versions._
@@ -32,7 +32,6 @@ object Dependencies {
     "com.typesafe.akka" %% "akka-actor"                  % Akka,
     "com.typesafe.akka" %% "akka-actor-testkit-typed"    % Akka,
     "com.typesafe.akka" %% "akka-actor-typed"            % Akka,
-    "com.typesafe.akka" %% "akka-coordination"           % Akka,
     "com.typesafe.akka" %% "akka-cluster"                % Akka,
     "com.typesafe.akka" %% "akka-cluster-metrics"        % Akka,
     "com.typesafe.akka" %% "akka-cluster-sharding"       % Akka,
@@ -61,12 +60,14 @@ object Dependencies {
 
   val akkaHttp = Seq(
     "com.typesafe.akka" %% "akka-http"            % AkkaHttp,
+    "com.typesafe.akka" %% "akka-http-caching"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-core"       % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-jackson"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-testkit"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-xml"        % AkkaHttp,
-    "com.typesafe.akka" %% "akka-http2-support"   % AkkaHttp
+    "com.typesafe.akka" %% "akka-http2-support"   % AkkaHttp,
+    "com.typesafe.akka" %% "akka-parsing"         % AkkaHttp
   )
 
   val akkaManagement = Seq(
@@ -127,6 +128,7 @@ object Dependencies {
     "com.lightbend.cinnamon"  % "cinnamon-akka-http-spi"                    % Telemetry,
     "com.lightbend.cinnamon" %% "cinnamon-akka-persistence"                 % Telemetry,
     "com.lightbend.cinnamon"  % "cinnamon-akka-persistence-spi"             % Telemetry,
+    "com.lightbend.cinnamon" %% "cinnamon-akka-projection"                  % Telemetry,
     "com.lightbend.cinnamon"  % "cinnamon-akka-spi"                         % Telemetry,
     "com.lightbend.cinnamon" %% "cinnamon-akka-stream"                      % Telemetry,
     "com.lightbend.cinnamon"  % "cinnamon-akka-stream-spi"                  % Telemetry,
