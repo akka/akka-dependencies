@@ -32,7 +32,6 @@ object Dependencies {
     "com.typesafe.akka" %% "akka-actor"                  % Akka,
     "com.typesafe.akka" %% "akka-actor-testkit-typed"    % Akka,
     "com.typesafe.akka" %% "akka-actor-typed"            % Akka,
-    "com.typesafe.akka" %% "akka-coordination"           % Akka,
     "com.typesafe.akka" %% "akka-cluster"                % Akka,
     "com.typesafe.akka" %% "akka-cluster-metrics"        % Akka,
     "com.typesafe.akka" %% "akka-cluster-sharding"       % Akka,
