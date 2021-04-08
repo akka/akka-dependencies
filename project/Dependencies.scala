@@ -61,12 +61,14 @@ object Dependencies {
 
   val akkaHttp = Seq(
     "com.typesafe.akka" %% "akka-http"            % AkkaHttp,
+    "com.typesafe.akka" %% "akka-http-caching"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-core"       % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-jackson"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-testkit"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-xml"        % AkkaHttp,
-    "com.typesafe.akka" %% "akka-http2-support"   % AkkaHttp
+    "com.typesafe.akka" %% "akka-http2-support"   % AkkaHttp,
+    "com.typesafe.akka" %% "akka-parsing"         % AkkaHttp
   )
 
   val akkaManagement = Seq(
