@@ -5,7 +5,7 @@ object Dependencies {
     val Scala213           = "2.13.5"
     val CrossScalaVersions = Seq(Scala213)
 
-    val Akka                     = "2.6.13"
+    val Akka                     = "2.6.14"
     val AkkaHttp                 = "10.2.4"
     val AkkaManagement           = "1.0.10"
     val AkkaProjections          = "1.1.0"
