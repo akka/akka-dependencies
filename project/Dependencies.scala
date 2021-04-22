@@ -16,7 +16,7 @@ object Dependencies {
     val AkkaEnhancements         = "1.1.16"
     val Alpakka                  = "2.0.2"
     val AlpakkaKafka             = "2.0.7"
-    val Telemetry                = "2.15.0"
+    val Telemetry                = "2.15.1"
   }
 
   import Versions._
