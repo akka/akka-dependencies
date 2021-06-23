@@ -5,6 +5,8 @@ object Dependencies {
     val Scala213           = "2.13.5"
     val CrossScalaVersions = Seq(Scala213)
 
+    // To update Cinnamon version, change the plugin version
+    // in project/plugins.sbt
     val Akka                     = "2.6.14"
     val AkkaHttp                 = "10.2.4"
     val AkkaManagement           = "1.0.10"
@@ -16,7 +18,6 @@ object Dependencies {
     val AkkaEnhancements         = "1.1.16"
     val Alpakka                  = "2.0.2"
     val AlpakkaKafka             = "2.0.7"
-    val Telemetry                = "2.15.1"
   }
 
   import Versions._
@@ -117,64 +118,4 @@ object Dependencies {
   val akkaResilienceEnhancements = Seq(
     "com.lightbend.akka" %% "akka-diagnostics" % AkkaEnhancements
   )
-
-  val telemetry = Seq(
-    "com.lightbend.cinnamon"  % "cinnamon-agent"                            % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-agent-common"                     % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-akka"                             % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-akka-cluster"                     % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-akka-cluster-spi"                 % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-akka-http"                        % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-akka-http-spi"                    % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-akka-persistence"                 % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-akka-persistence-spi"             % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-akka-projection"                  % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-akka-spi"                         % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-akka-stream"                      % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-akka-stream-spi"                  % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-akka-typed"                       % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-alpakka-kafka-spi"                % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-chmetrics"                        % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-chmetrics3"                       % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-chmetrics3-jvm-metrics"           % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-chmetrics-elasticsearch-reporter" % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-chmetrics-hdrhistogram"           % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-chmetrics-http-reporter"          % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-chmetrics-jvm-metrics"            % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-chmetrics-statsd-reporter"        % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-common"                           % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-context-propagation"              % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-core"                             % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-core-java"                        % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-datadog"                          % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-datadog-socket"                   % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-jmx-importer-hikaricp"            % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-java"                             % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-java-future-spi"                  % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-jmx-importer"                     % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-jvm-metrics-producer"             % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-jmx-importer-kafka-consumer"      % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-jmx-importer-kafka-producer"      % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-lagom"                            % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-lagom-projection"                 % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-lagom-projection-spi"             % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-newrelic"                         % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-opentracing"                      % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-opentracing-datadog"              % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-opentracing-jaeger"               % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-opentracing-tracer"               % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-opentracing-zipkin"               % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-opentracing-zipkin-kafka"         % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-opentracing-zipkin-scribe"        % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-play"                             % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-play-spi"                         % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-prometheus"                       % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-prometheus-httpserver"            % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-scala"                            % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-scala-future-spi"                 % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-slf4j-events"                     % Telemetry,
-    "com.lightbend.cinnamon" %% "cinnamon-slf4j-mdc"                        % Telemetry,
-    "com.lightbend.cinnamon"  % "cinnamon-telegraf"                         % Telemetry
-  )
-
 }

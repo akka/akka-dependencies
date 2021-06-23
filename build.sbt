@@ -28,7 +28,7 @@ lazy val `akka-platform-dependencies` =
         akkaPersistencePlugins ++
         akkaResilienceEnhancements ++
         alpakka ++
-        telemetry,
+        Cinnamon.library.modules,
       // to check that all dependencies can be pulled and there are no conflicts
       libraryDependencies := bomIncludeModules.value,
       publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true),
