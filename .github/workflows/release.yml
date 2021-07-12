@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     name: Publish to Sonatype
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -31,8 +31,7 @@ jobs:
 
       - name: Check scalafmt rules, pull dependencies, publish BOM locally successfully
         env:
-          # FIXME: required to access commercial lightbend releases, but not for much longer.
-          BINTRAY_TOKEN: ${{ secrets.BINTRAY_TOKEN }}
+          LIGHTBEND_COMMERCIAL_MVN: ${{ secrets.LIGHTBEND_COMMERCIAL_MVN }}
         run: sbt checkPullBom
 
       - name: Sonatype release
