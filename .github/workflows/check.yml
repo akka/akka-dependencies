@@ -29,3 +29,6 @@ jobs:
 
       - name: Check scalafmt rules, publish BOM locally
         run: sbt checkBom
+
+      - name: Check open-source dependencies can be pulled
+        run: sbt update

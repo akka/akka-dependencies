@@ -11,7 +11,7 @@ object Dependencies {
     val AkkaHttp                 = "10.2.4"
     val AkkaManagement           = "1.1.0"
     val AkkaProjections          = "1.2.1"
-    val AkkaGrpc                 = "2.0.0"
+    val AkkaGrpc                 = "1.1.1"
     val AkkaPersistenceCassandra = "1.0.5"
     val AkkaPersistenceJdbc      = "5.0.1"
     val AkkaPersistenceCouchbase = "1.0"
@@ -118,4 +118,9 @@ object Dependencies {
   val akkaResilienceEnhancements = Seq(
     "com.lightbend.akka" %% "akka-diagnostics" % AkkaEnhancements
   )
+
+  // sbt-cinnamon plugin does not have artifacts for Scala 2.13.x
+  val telemetry = com.lightbend.cinnamon.sbt.Cinnamon.library.modules.filterNot(_.name.equals("sbt-cinnamon"))
+
+  val allCommercialLibs = akkaResilienceEnhancements ++ telemetry
 }

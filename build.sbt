@@ -41,9 +41,17 @@ lazy val `akka-platform-dependencies` =
         akkaPersistencePlugins ++
         akkaResilienceEnhancements ++
         alpakka ++
-        Cinnamon.library.modules,
+        telemetry,
       // to check that all dependencies can be pulled and there are no conflicts
-      libraryDependencies := bomIncludeModules.value,
+      libraryDependencies ++= {
+        val bomDeps = bomIncludeModules.value
+        if (sys.env.contains("LIGHTBEND_COMMERCIAL_MVN")) {
+          bomDeps
+        } else {
+          // Run the validation for at least the non-commercial dependencies
+          bomDeps.filterNot(allCommercialLibs.contains)
+        }
+      },
       publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true),
       publishM2Configuration := publishM2Configuration.value.withOverwrite(true)
     )
