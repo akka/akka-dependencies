@@ -1,5 +1,18 @@
 import Dependencies._
 
+ThisBuild / resolvers ++= sys.env
+  .get("LIGHTBEND_COMMERCIAL_MVN")
+  .map { repo =>
+    Seq(
+      "lightbend-commercial-mvn".at(repo),
+      Resolver.url(
+        "lightbend-commercial-ivy",
+        url(repo)
+      )(Resolver.ivyStylePatterns)
+    )
+  }
+  .getOrElse(Seq.empty)
+
 lazy val `akka-platform-dependencies` =
   Project(id = "akka-platform-dependencies", base = file("."))
     .enablePlugins(BillOfMaterialsPlugin)
@@ -32,20 +45,7 @@ lazy val `akka-platform-dependencies` =
       // to check that all dependencies can be pulled and there are no conflicts
       libraryDependencies := bomIncludeModules.value,
       publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true),
-      publishM2Configuration := publishM2Configuration.value.withOverwrite(true),
-      // FIXME: required to access lightbend commercial releases, but not for much longer.
-      resolvers in ThisBuild ++= sys.env
-        .get("BINTRAY_TOKEN")
-        .map(token =>
-          Seq(
-            "lightbend-commercial-mvn".at(s"https://repo.lightbend.com/pass/$token/commercial-releases"),
-            Resolver.url(
-              "lightbend-commercial-ivy",
-              url(s"https://repo.lightbend.com/pass/$token/commercial-releases")
-            )(Resolver.ivyStylePatterns)
-          )
-        )
-        .getOrElse(Seq.empty[Resolver])
+      publishM2Configuration := publishM2Configuration.value.withOverwrite(true)
     )
 
 addCommandAlias("checkBom", ";scalafmtSbtCheck;+akka-platform-dependencies/billOfMaterials:publishM2")

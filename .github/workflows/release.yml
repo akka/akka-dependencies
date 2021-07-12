@@ -31,8 +31,7 @@ jobs:
 
       - name: Check scalafmt rules, pull dependencies, publish BOM locally successfully
         env:
-          # FIXME: required to access commercial lightbend releases, but not for much longer.
-          BINTRAY_TOKEN: ${{ secrets.BINTRAY_TOKEN }}
+          LIGHTBEND_COMMERCIAL_MVN: ${{ secrets.LIGHTBEND_COMMERCIAL_MVN }}
         run: sbt checkPullBom
 
       - name: Sonatype release
