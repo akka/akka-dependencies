@@ -96,7 +96,7 @@ object Dependencies {
     // maven plugin versions can't be set with BOM/dependencyManagement
     //("com.lightbend.akka.grpc" % "akka-grpc-maven-plugin" % AkkaGrpc).withExclusions(Vector(ExclusionRule.everything)),
     "com.lightbend.akka.grpc" %% "akka-grpc-runtime" % AkkaGrpc,
-    "com.lightbend.akka.grpc" %% "akka-grpc-codegen" % AkkaGrpc
+    //"com.lightbend.akka.grpc" %% "akka-grpc-codegen" % AkkaGrpc
   )
 
   val akkaPersistencePlugins = Seq(
