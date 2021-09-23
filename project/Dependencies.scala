@@ -81,12 +81,13 @@ object Dependencies {
   )
 
   val akkaProjections = Seq(
-    "com.lightbend.akka" %% "akka-projection-core"         % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-eventsourced" % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-kafka"        % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-cassandra"    % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-jdbc"         % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-testkit"      % AkkaProjections
+    "com.lightbend.akka" %% "akka-projection-core"          % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-eventsourced"  % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-durable-state" % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-kafka"         % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-cassandra"     % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-jdbc"          % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-testkit"       % AkkaProjections
   )
 
   val akkaGrpc = Seq(
