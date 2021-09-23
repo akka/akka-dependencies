@@ -95,7 +95,7 @@ object Dependencies {
     // `Modules were resolved with conflicting cross-version suffixes in ProjectRef(uri("file:/home/seglo/source/akka-platform-guide/akka-platform-dependencies/"), "akka-platform-dependencies") ...`
     // maven plugin versions can't be set with BOM/dependencyManagement
     //("com.lightbend.akka.grpc" % "akka-grpc-maven-plugin" % AkkaGrpc).withExclusions(Vector(ExclusionRule.everything)),
-    "com.lightbend.akka.grpc" %% "akka-grpc-runtime" % AkkaGrpc,
+    "com.lightbend.akka.grpc" %% "akka-grpc-runtime" % AkkaGrpc
     //"com.lightbend.akka.grpc" %% "akka-grpc-codegen" % AkkaGrpc
   )
 
