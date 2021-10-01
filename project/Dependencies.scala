@@ -2,22 +2,22 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val Scala213           = "2.13.5"
+    val Scala213           = "2.13.6"
     val CrossScalaVersions = Seq(Scala213)
 
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
-    val Akka                     = "2.6.15"
-    val AkkaHttp                 = "10.2.4"
+    val Akka                     = "2.6.16"
+    val AkkaHttp                 = "10.2.6"
     val AkkaManagement           = "1.1.0"
-    val AkkaProjections          = "1.2.1"
-    val AkkaGrpc                 = "1.1.1"
+    val AkkaProjections          = "1.2.2"
+    val AkkaGrpc                 = "2.1.0"
     val AkkaPersistenceCassandra = "1.0.5"
-    val AkkaPersistenceJdbc      = "5.0.1"
+    val AkkaPersistenceJdbc      = "5.0.4"
     val AkkaPersistenceCouchbase = "1.0"
     val AkkaEnhancements         = "1.1.16"
-    val Alpakka                  = "3.0.1"
-    val AlpakkaKafka             = "2.1.0"
+    val Alpakka                  = "3.0.3"
+    val AlpakkaKafka             = "2.1.1"
   }
 
   import Versions._
@@ -81,21 +81,17 @@ object Dependencies {
   )
 
   val akkaProjections = Seq(
-    "com.lightbend.akka" %% "akka-projection-core"         % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-eventsourced" % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-kafka"        % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-cassandra"    % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-jdbc"         % AkkaProjections,
-    "com.lightbend.akka" %% "akka-projection-testkit"      % AkkaProjections
+    "com.lightbend.akka" %% "akka-projection-core"          % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-eventsourced"  % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-durable-state" % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-kafka"         % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-cassandra"     % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-jdbc"          % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-testkit"       % AkkaProjections
   )
 
   val akkaGrpc = Seq(
-    // maven plugin brings in Scala dependencies that conflict with current crossVersion of BOM
-    // `Modules were resolved with conflicting cross-version suffixes in ProjectRef(uri("file:/home/seglo/source/akka-platform-guide/akka-platform-dependencies/"), "akka-platform-dependencies") ...`
-    // maven plugin versions can't be set with BOM/dependencyManagement
-    //("com.lightbend.akka.grpc" % "akka-grpc-maven-plugin" % AkkaGrpc).withExclusions(Vector(ExclusionRule.everything)),
-    "com.lightbend.akka.grpc" %% "akka-grpc-runtime" % AkkaGrpc,
-    "com.lightbend.akka.grpc" %% "akka-grpc-codegen" % AkkaGrpc
+    "com.lightbend.akka.grpc" %% "akka-grpc-runtime" % AkkaGrpc
   )
 
   val akkaPersistencePlugins = Seq(
