@@ -9,9 +9,9 @@ object Dependencies {
     // in project/plugins.sbt
     val Akka                     = "2.6.18"
     val AkkaHttp                 = "10.2.7"
-    val AkkaManagement           = "1.1.1"
+    val AkkaManagement           = "1.1.2"
     val AkkaProjections          = "1.2.3"
-    val AkkaGrpc                 = "2.1.2"
+    val AkkaGrpc                 = "2.1.3"
     val AkkaPersistenceCassandra = "1.0.5"
     val AkkaPersistenceJdbc      = "5.0.4"
     val AkkaPersistenceCouchbase = "1.0"
