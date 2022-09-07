@@ -24,7 +24,9 @@ lazy val `akka-platform-dependencies` =
       name := "akka-platform-dependencies",
       description := s"${description.value} (depending on Scala ${CrossVersion.binaryScalaVersion(scalaVersion.value)})",
       homepage := Some(url("https://akka.io/")),
-      licenses := Seq(("BUSL-1.1", url("https://raw.githubusercontent.com/lightbend/akka-platform-dependencies/main/LICENSE"))), // FIXME change s/main/v0.4.0/ when released
+      licenses := Seq(
+        ("BUSL-1.1", url("https://raw.githubusercontent.com/lightbend/akka-platform-dependencies/main/LICENSE"))
+      ), // FIXME change s/main/v0.4.0/ when released
       developers := List(
         Developer(
           "akka-contributors",
