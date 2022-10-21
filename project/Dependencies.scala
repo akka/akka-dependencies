@@ -2,22 +2,22 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val Scala213           = "2.13.6"
+    val Scala213           = "2.13.10"
     val CrossScalaVersions = Seq(Scala213)
 
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
-    val Akka                     = "2.6.20"
-    val AkkaHttp                 = "10.2.10"
-    val AkkaManagement           = "1.1.4"
-    val AkkaProjections          = "1.2.5"
-    val AkkaGrpc                 = "2.1.6"
-    val AkkaPersistenceCassandra = "1.0.6"
-    val AkkaPersistenceJdbc      = "5.1.0"
-    val AkkaPersistenceCouchbase = "1.0"
-    val AkkaEnhancements         = "1.1.16"
-    val Alpakka                  = "4.0.0"
-    val AlpakkaKafka             = "3.0.1"
+    val Akka                     = "2.7.0"
+    val AkkaHttp                 = "10.4.0"
+    val AkkaManagement           = "1.2.0"
+    val AkkaProjections          = "1.3.0"
+    val AkkaGrpc                 = "2.2.0"
+    val AkkaPersistenceCassandra = "1.1.0"
+    val AkkaPersistenceJdbc      = "5.2.0"
+    val AkkaPersistenceR2dbc     = "1.0.0"
+    val AkkaProjectionsR2dbc     = "1.0.0"
+    val Alpakka                  = "5.0.0"
+    val AlpakkaKafka             = "4.0.0"
   }
 
   import Versions._
@@ -87,6 +87,7 @@ object Dependencies {
     "com.lightbend.akka" %% "akka-projection-kafka"         % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-cassandra"     % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-jdbc"          % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-r2dbc"         % AkkaProjectionsR2dbc,
     "com.lightbend.akka" %% "akka-projection-testkit"       % AkkaProjections
   )
 
@@ -97,12 +98,12 @@ object Dependencies {
   val akkaPersistencePlugins = Seq(
     "com.typesafe.akka"  %% "akka-persistence-cassandra"          % AkkaPersistenceCassandra,
     "com.typesafe.akka"  %% "akka-persistence-cassandra-launcher" % AkkaPersistenceCassandra,
-    "com.lightbend.akka" %% "akka-persistence-jdbc"               % AkkaPersistenceJdbc
+    "com.lightbend.akka" %% "akka-persistence-jdbc"               % AkkaPersistenceJdbc,
+    "com.lightbend.akka" %% "akka-persistence-r2dbc"              % AkkaPersistenceR2dbc
   )
 
   val alpakka = Seq(
     "com.lightbend.akka" %% "akka-stream-alpakka-cassandra" % Alpakka,
-    "com.lightbend.akka" %% "akka-stream-alpakka-couchbase" % Alpakka,
     "com.lightbend.akka" %% "akka-stream-alpakka-csv"       % Alpakka,
     "com.typesafe.akka"  %% "akka-stream-kafka"             % AlpakkaKafka
   )
@@ -111,12 +112,8 @@ object Dependencies {
    * Commercial components
    */
 
-  val akkaResilienceEnhancements = Seq(
-    "com.lightbend.akka" %% "akka-diagnostics" % AkkaEnhancements
-  )
-
   // sbt-cinnamon plugin does not have artifacts for Scala 2.13.x
   val telemetry = com.lightbend.cinnamon.sbt.Cinnamon.library.modules.filterNot(_.name.equals("sbt-cinnamon"))
 
-  val allCommercialLibs = akkaResilienceEnhancements ++ telemetry
+  val allCommercialLibs = telemetry
 }

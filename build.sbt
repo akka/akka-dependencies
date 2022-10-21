@@ -13,26 +13,26 @@ ThisBuild / resolvers ++= sys.env
   }
   .getOrElse(Seq.empty)
 
-lazy val `akka-platform-dependencies` =
-  Project(id = "akka-platform-dependencies", base = file("."))
+lazy val `akka-dependencies` =
+  Project(id = "akka-dependencies", base = file("."))
     .enablePlugins(BillOfMaterialsPlugin)
     .settings(
       crossScalaVersions := Versions.CrossScalaVersions,
       scalaVersion := Versions.Scala213,
       organization := "com.lightbend.akka",
       sonatypeProfileName := "com.lightbend",
-      name := "akka-platform-dependencies",
+      name := "akka-dependencies",
       description := s"${description.value} (depending on Scala ${CrossVersion.binaryScalaVersion(scalaVersion.value)})",
       homepage := Some(url("https://akka.io/")),
       licenses := Seq(
-        ("BUSL-1.1", url("https://raw.githubusercontent.com/lightbend/akka-platform-dependencies/main/LICENSE"))
-      ), // FIXME change s/main/v0.4.0/ when released
+        ("BUSL-1.1", url("https://raw.githubusercontent.com/lightbend/akka-dependencies/v10.22.0/LICENSE"))
+      ),
       developers := List(
         Developer(
           "akka-contributors",
           "Akka Contributors",
           "akka.official@gmail.com",
-          url("https://github.com/akka/akka/graphs/contributors")
+          url("https://github.com/lightbend/akka-dependencies/graphs/contributors")
         )
       ),
       bomIncludeModules := akka ++
@@ -41,7 +41,6 @@ lazy val `akka-platform-dependencies` =
         akkaProjections ++
         akkaGrpc ++
         akkaPersistencePlugins ++
-        akkaResilienceEnhancements ++
         alpakka ++
         telemetry,
       // to check that all dependencies can be pulled and there are no conflicts
@@ -58,5 +57,5 @@ lazy val `akka-platform-dependencies` =
       publishM2Configuration := publishM2Configuration.value.withOverwrite(true)
     )
 
-addCommandAlias("checkBom", ";scalafmtSbtCheck;+akka-platform-dependencies/billOfMaterials:publishM2")
-addCommandAlias("checkPullBom", ";scalafmtSbtCheck;+update;+akka-platform-dependencies/billOfMaterials:publishM2")
+addCommandAlias("checkBom", ";scalafmtSbtCheck;+akka-dependencies/billOfMaterials:publishM2")
+addCommandAlias("checkPullBom", ";scalafmtSbtCheck;+update;+akka-dependencies/billOfMaterials:publishM2")
