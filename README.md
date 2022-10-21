@@ -1,9 +1,9 @@
 # Akka Platform Dependencies
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.lightbend.akka/akka-platform-dependencies_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.lightbend.akka/akka-platform-dependencies_2.13)
-![Check](https://github.com/lightbend/akka-platform-dependencies/actions/workflows/check.yml/badge.svg)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.lightbend.akka/akka-dependencies_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.lightbend.akka/akka-dependencies_2.13)
+![Check](https://github.com/lightbend/akka-dependencies/actions/workflows/check.yml/badge.svg)
 
-Akka Platform Dependencies is a Maven bill of materials (BOM) that can be referenced to make it easier to reference compatible versions of Akka open source and commercial components in a project.
+Akka Dependencies is a Maven bill of materials (BOM) that can be referenced to make it easier to reference compatible versions of Akka components in a project.
 For a full list of included dependencies see the [`Dependencies`](./project/Dependencies.scala) file.
 
 Usage: 
@@ -12,14 +12,14 @@ Add a `dependencyManagement` `dependency` to your `pom.xml`:
 
 ```xml
     <properties>
-        <akka-platform.version>1.0.0</akka-platform.version>
+        <akka-dependencies.version>1.0.0</akka-dependencies.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.lightbend.akka</groupId>
-                <artifactId>akka-platform-dependencies_2.13</artifactId>
-                <version>${akka-platform.version}</version>
+                <artifactId>akka-dependencies_2.13</artifactId>
+                <version>${akka-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
