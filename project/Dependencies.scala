@@ -88,6 +88,7 @@ object Dependencies {
     "com.lightbend.akka" %% "akka-projection-cassandra"     % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-jdbc"          % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-r2dbc"         % AkkaProjectionsR2dbc,
+    "com.lightbend.akka" %% "akka-projection-grpc"          % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-testkit"       % AkkaProjections
   )
 
