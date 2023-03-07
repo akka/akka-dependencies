@@ -104,9 +104,11 @@ object Dependencies {
   )
 
   val alpakka = Seq(
-    "com.lightbend.akka" %% "akka-stream-alpakka-cassandra" % Alpakka,
-    "com.lightbend.akka" %% "akka-stream-alpakka-csv"       % Alpakka,
-    "com.typesafe.akka"  %% "akka-stream-kafka"             % AlpakkaKafka
+    "com.lightbend.akka" %% "akka-stream-alpakka-cassandra"      % Alpakka,
+    "com.lightbend.akka" %% "akka-stream-alpakka-csv"            % Alpakka,
+    "com.typesafe.akka"  %% "akka-stream-kafka"                  % AlpakkaKafka,
+    "com.typesafe.akka"  %% "akka-stream-kafka-cluster-sharding" % AlpakkaKafka,
+    "com.typesafe.akka"  %% "akka-stream-kafka-testkit"          % AlpakkaKafka
   )
 
   /**
