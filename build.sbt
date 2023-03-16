@@ -42,6 +42,7 @@ lazy val `akka-dependencies` =
         akkaGrpc ++
         akkaPersistencePlugins ++
         alpakka ++
+        akkaDiagnostics ++
         telemetry,
       // to check that all dependencies can be pulled and there are no conflicts
       libraryDependencies ++= {

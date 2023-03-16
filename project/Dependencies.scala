@@ -18,6 +18,7 @@ object Dependencies {
     val AkkaProjectionsR2dbc     = "1.0.1"
     val Alpakka                  = "5.0.0"
     val AlpakkaKafka             = "4.0.0"
+    val AkkaDiagnostics          = "2.0.0"
   }
 
   import Versions._
@@ -109,6 +110,10 @@ object Dependencies {
     "com.typesafe.akka"  %% "akka-stream-kafka"                  % AlpakkaKafka,
     "com.typesafe.akka"  %% "akka-stream-kafka-cluster-sharding" % AlpakkaKafka,
     "com.typesafe.akka"  %% "akka-stream-kafka-testkit"          % AlpakkaKafka
+  )
+
+  val akkaDiagnostics = Seq(
+    "com.lightbend.akka" %% "akka-diagnostics" % AkkaDiagnostics
   )
 
   /**
