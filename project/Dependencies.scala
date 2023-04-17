@@ -7,7 +7,7 @@ object Dependencies {
 
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
-    val Akka                     = "2.7.0"
+    val Akka                     = "2.8.0"
     val AkkaHttp                 = "10.5.0"
     val AkkaManagement           = "1.2.0"
     val AkkaProjections          = "1.3.1"
@@ -45,7 +45,6 @@ object Dependencies {
     "com.typesafe.akka" %% "akka-distributed-data"       % Akka,
     "com.typesafe.akka" %% "akka-serialization-jackson"  % Akka,
     "com.typesafe.akka" %% "akka-multi-node-testkit"     % Akka,
-    "com.typesafe.akka" %% "akka-osgi"                   % Akka,
     "com.typesafe.akka" %% "akka-persistence"            % Akka,
     "com.typesafe.akka" %% "akka-persistence-query"      % Akka,
     "com.typesafe.akka" %% "akka-persistence-typed"      % Akka,
