@@ -7,7 +7,7 @@ object Dependencies {
 
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
-    val Akka                     = "2.8.1-M1"
+    val Akka                     = "2.8.1"
     val AkkaHttp                 = "10.5.1"
     val AkkaManagement           = "1.3.0"
     val AkkaProjections          = "1.4.0-M4"
