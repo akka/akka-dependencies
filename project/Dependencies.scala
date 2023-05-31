@@ -10,7 +10,7 @@ object Dependencies {
     val Akka                     = "2.8.4"
     val AkkaHttp                 = "10.5.2"
     val AkkaManagement           = "1.4.1"
-    val AkkaProjections          = "1.4.0"
+    val AkkaProjections          = "1.4.2"
     val AkkaGrpc                 = "2.3.3"
     val AkkaPersistenceCassandra = "1.1.1"
     val AkkaPersistenceJdbc      = "5.2.1"
