@@ -44,6 +44,7 @@ lazy val `akka-dependencies` =
         alpakka ++
         akkaDiagnostics ++
         telemetry,
+      resolvers += "Akka library repository".at("https://repo.akka.io/maven"),
       // to check that all dependencies can be pulled and there are no conflicts
       libraryDependencies ++= {
         val bomDeps = bomIncludeModules.value
