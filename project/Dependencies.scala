@@ -95,9 +95,9 @@ object Dependencies {
   )
 
   val akkaPersistencePlugins = Seq(
-    "com.typesafe.akka"  %% "akka-persistence-cassandra"          % AkkaPersistenceCassandra,
-    "com.lightbend.akka" %% "akka-persistence-jdbc"               % AkkaPersistenceJdbc,
-    "com.lightbend.akka" %% "akka-persistence-r2dbc"              % AkkaPersistenceR2dbc
+    "com.typesafe.akka"  %% "akka-persistence-cassandra" % AkkaPersistenceCassandra,
+    "com.lightbend.akka" %% "akka-persistence-jdbc"      % AkkaPersistenceJdbc,
+    "com.lightbend.akka" %% "akka-persistence-r2dbc"     % AkkaPersistenceR2dbc
   )
 
   val alpakka = Seq(

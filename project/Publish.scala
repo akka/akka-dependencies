@@ -24,7 +24,7 @@ object NoPublish extends AutoPlugin {
 
 object Publish extends AutoPlugin {
   override def requires = plugins.JvmPlugin
-  override def trigger = AllRequirements
+  override def trigger  = AllRequirements
 
   lazy val beforePublishTask = taskKey[Unit]("setup before publish")
 
