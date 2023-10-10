@@ -2,22 +2,22 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val Scala213           = "2.13.10"
+    val Scala213           = "2.13.12"
     val CrossScalaVersions = Seq(Scala213)
 
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
-    val Akka                     = "2.8.5"
-    val AkkaHttp                 = "10.5.2"
-    val AkkaManagement           = "1.4.1"
-    val AkkaProjections          = "1.4.2"
-    val AkkaGrpc                 = "2.3.4"
-    val AkkaPersistenceCassandra = "1.1.1"
-    val AkkaPersistenceJdbc      = "5.2.1"
-    val AkkaPersistenceR2dbc     = "1.1.2"
-    val Alpakka                  = "6.0.2"
-    val AlpakkaKafka             = "4.0.2"
-    val AkkaDiagnostics          = "2.0.1"
+    val Akka                     = "2.9.0-M3"
+    val AkkaHttp                 = "10.6.0-M2"
+    val AkkaManagement           = "1.5.0-M2"
+    val AkkaProjections          = "1.5.0-M5"
+    val AkkaGrpc                 = "2.4.0-M1"
+    val AkkaPersistenceCassandra = "1.2.0-M1"
+    val AkkaPersistenceJdbc      = "5.3.0-M1"
+    val AkkaPersistenceR2dbc     = "1.2.0-M6"
+    val Alpakka                  = "7.0.0-M2"
+    val AlpakkaKafka             = "5.0.0-M1"
+    val AkkaDiagnostics          = "2.1.0-M1"
   }
 
   import Versions._
@@ -25,9 +25,6 @@ object Dependencies {
   /**
    * Based on list of supported components
    * https://developer.lightbend.com/docs/introduction/getting-help/build-dependencies.html
-   */
-  /**
-   * Open Source components
    */
   val akka = Seq(
     "com.typesafe.akka" %% "akka-actor"                  % Akka,
@@ -66,7 +63,6 @@ object Dependencies {
     "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-testkit"    % AkkaHttp,
     "com.typesafe.akka" %% "akka-http-xml"        % AkkaHttp,
-    "com.typesafe.akka" %% "akka-http2-support"   % AkkaHttp,
     "com.typesafe.akka" %% "akka-parsing"         % AkkaHttp
   )
 
@@ -96,10 +92,9 @@ object Dependencies {
   )
 
   val akkaPersistencePlugins = Seq(
-    "com.typesafe.akka"  %% "akka-persistence-cassandra"          % AkkaPersistenceCassandra,
-    "com.typesafe.akka"  %% "akka-persistence-cassandra-launcher" % AkkaPersistenceCassandra,
-    "com.lightbend.akka" %% "akka-persistence-jdbc"               % AkkaPersistenceJdbc,
-    "com.lightbend.akka" %% "akka-persistence-r2dbc"              % AkkaPersistenceR2dbc
+    "com.typesafe.akka"  %% "akka-persistence-cassandra" % AkkaPersistenceCassandra,
+    "com.lightbend.akka" %% "akka-persistence-jdbc"      % AkkaPersistenceJdbc,
+    "com.lightbend.akka" %% "akka-persistence-r2dbc"     % AkkaPersistenceR2dbc
   )
 
   val alpakka = Seq(
