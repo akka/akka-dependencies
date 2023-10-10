@@ -1,5 +1,8 @@
 import Dependencies._
+import com.geirsson.CiReleasePlugin
+import sbtdynver.DynVerPlugin.autoImport.dynverSonatypeSnapshots
 
+ThisBuild / resolvers += "Akka library repository".at("https://repo.akka.io/maven")
 ThisBuild / resolvers ++= sys.env
   .get("LIGHTBEND_COMMERCIAL_MVN")
   .map { repo =>
@@ -16,11 +19,11 @@ ThisBuild / resolvers ++= sys.env
 lazy val `akka-dependencies` =
   Project(id = "akka-dependencies", base = file("."))
     .enablePlugins(BillOfMaterialsPlugin)
+    .disablePlugins(CiReleasePlugin)
     .settings(
       crossScalaVersions := Versions.CrossScalaVersions,
       scalaVersion := Versions.Scala213,
       organization := "com.lightbend.akka",
-      sonatypeProfileName := "com.lightbend",
       name := "akka-dependencies",
       description := s"${description.value} (depending on Scala ${CrossVersion.binaryScalaVersion(scalaVersion.value)})",
       homepage := Some(url("https://akka.io/")),
@@ -35,6 +38,8 @@ lazy val `akka-dependencies` =
           url("https://github.com/lightbend/akka-dependencies/graphs/contributors")
         )
       ),
+      // append -SNAPSHOT to version when isSnapshot
+      ThisBuild / dynverSonatypeSnapshots := true,
       bomIncludeModules := akka ++
         akkaHttp ++
         akkaManagement ++
