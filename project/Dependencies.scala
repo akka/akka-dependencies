@@ -26,9 +26,6 @@ object Dependencies {
    * Based on list of supported components
    * https://developer.lightbend.com/docs/introduction/getting-help/build-dependencies.html
    */
-  /**
-   * Open Source components
-   */
   val akka = Seq(
     "com.typesafe.akka" %% "akka-actor"                  % Akka,
     "com.typesafe.akka" %% "akka-actor-testkit-typed"    % Akka,
