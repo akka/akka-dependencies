@@ -1,7 +1,4 @@
-# Akka Platform Dependencies
-
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.lightbend.akka/akka-dependencies_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.lightbend.akka/akka-dependencies_2.13)
-![Check](https://github.com/lightbend/akka-dependencies/actions/workflows/check.yml/badge.svg)
+# Akka Dependencies
 
 Akka Dependencies is a Maven bill of materials (BOM) that can be referenced to make it easier to reference compatible versions of Akka components in a project.
 For a full list of included dependencies see the [`Dependencies`](./project/Dependencies.scala) file.
@@ -12,8 +9,16 @@ Add a `dependencyManagement` `dependency` to your `pom.xml`:
 
 ```xml
     <properties>
-        <akka-dependencies.version>1.0.0</akka-dependencies.version>
+        <!-- use latest version from https://github.com/akka/akka-dependencies/releases !--> 
+        <akka-dependencies.version>23.10.0</akka-dependencies.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>akka-repository</id>
+            <name>Akka library repository</name>
+            <url>https://repo.akka.io/maven</url>
+        </repository>
+    </repositories>
     <dependencyManagement>
         <dependencies>
             <dependency>
