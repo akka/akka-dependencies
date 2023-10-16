@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    name: Publish to Sonatype
+    name: Publish
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -34,7 +34,7 @@ jobs:
           LIGHTBEND_COMMERCIAL_MVN: ${{ secrets.LIGHTBEND_COMMERCIAL_MVN }}
         run: sbt checkPullBom
 
-      - name: Sonatype release
+      - name: publish
         env:
           PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
           PGP_SECRET: ${{ secrets.PGP_SECRET }}
