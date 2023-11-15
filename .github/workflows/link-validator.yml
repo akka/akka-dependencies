@@ -1,0 +1,38 @@
+name: Link Validator
+
+on:
+  pull_request:
+  schedule:
+    - cron:  '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-links:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+
+      - name: Cache Coursier cache
+        uses: coursier/cache-action@v6.4.1
+
+      - name: Set up JDK 11
+        uses: coursier/setup-action@v1.3.0
+        with:
+          jvm: temurin:1.17.0.5
+          apps: cs
+
+      - name: Add additional root certs
+        run: |
+          JAVA_HOME=$(cs java-home --jvm adopt:11)
+          keytool -importcert -trustcacerts -storepass changeit -alias sectigo -keystore $JAVA_HOME/lib/security/cacerts -file .additional-certs/Sectigo_RSA_Domain_Validation_Secure_server_CA.cer
+          keytool -importcert -trustcacerts -storepass changeit -alias gts_ca_1p5 -keystore $JAVA_HOME/lib/security/cacerts -file .additional-certs/GTS_CA_1P5.cer
+
+      - name: sbt site
+        run: sbt docs/makeSite
+
+      - name: Run Link Validator
+        run: cs launch net.runne::site-link-validator:0.2.3 -- .github/link-validator.conf
