@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 import scala.language.postfixOps
 
-import sbt.{Def, _}
+import sbt.{ Def, _ }
 import Keys._
 import com.geirsson.CiReleasePlugin
 import com.jsuereth.sbtpgp.PgpKeys.publishSigned
@@ -24,7 +24,7 @@ object NoPublish extends AutoPlugin {
 
 object Publish extends AutoPlugin {
   override def requires = plugins.JvmPlugin
-  override def trigger  = AllRequirements
+  override def trigger = AllRequirements
 
   lazy val beforePublishTask = taskKey[Unit]("setup before publish")
 
@@ -47,8 +47,7 @@ object Publish extends AutoPlugin {
                       Some(Resolver.file("file", target.value / "repository")) // FIXME snapshot repo
                     else
                       Some("Cloudsmith API".at("https://maven.cloudsmith.io/lightbend/akka/"))),
-      credentials ++= (if (isSnapshot.value) Seq[Credentials]() else cloudsmithCredentials(validate = false))
-    )
+      credentials ++= (if (isSnapshot.value) Seq[Credentials]() else cloudsmithCredentials(validate = false)))
 
   def cloudsmithCredentials(validate: Boolean): Seq[Credentials] = {
     (sys.env.get("PUBLISH_USER"), sys.env.get("PUBLISH_PASSWORD")) match {
