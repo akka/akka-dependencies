@@ -42,6 +42,10 @@ At the core of Akka: A model for concurrency and distribution without all the pa
 
 [Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/)
 
+#### Complete dependency listing of Akka core modules
+
+Check the [documentation](https://doc.akka.io/docs/akka/current/) to learn which dependencies you require. 
+
 @@dependency [Maven,sbt,Gradle] {
 symbol1=AkkaVersion
 value1="$akka.version$"
@@ -203,6 +207,10 @@ The Akka HTTP modules implement a full server- and client-side HTTP stack on top
 
 [JavaDoc](https://doc.akka.io/japi/akka-http/current/) [ScalaDoc](https://doc.akka.io/api/akka-http/current/akka/http/scaladsl/index.html)
 
+#### Complete dependency listing of Akka HTTP modules
+
+Check the [documentation](https://doc.akka.io/docs/akka-http/current/) to learn which dependencies you require.
+
 @@dependency [Maven,sbt,Gradle] {
     symbol1=AkkaHttpVersion
     value1="$akka-http.version$"
@@ -262,6 +270,10 @@ Akka Projections is intended for implementing Command Query Responsibility Segre
 Akka Management is a suite of tools for operating Akka Clusters.
 
 [Documentation](https://doc.akka.io/docs/akka-management/current/)
+
+#### Complete dependency listing of Akka Management modules
+
+Check the [documentation](https://doc.akka.io/docs/akka-management/current/) to learn which dependencies you require.
 
 @@dependency[sbt,Gradle,Maven] {
     symbol1=AkkaManagementVersion
