@@ -60,13 +60,12 @@ lazy val docs = project
   .enablePlugins(SitePreviewPlugin, AkkaParadoxPlugin, ParadoxSitePlugin, PublishRsyncPlugin)
   .settings(
     name := "Akka Dependencies",
+    scalaVersion := Versions.Scala213,
     previewPath := (Paradox / siteSubdirName).value,
     Paradox / siteSubdirName := s"docs/akka-dependencies/${projectInfoVersion.value}",
     projectInfoVersion := (if (isSnapshot.value) "snapshot" else version.value),
     publish / skip := true,
     paradoxProperties ++= Map(
-        "scala.version" -> "2.13",
-        "scala.binary.version" -> "2.13",
         "akka-scala-2.13.version" -> "2.13",
         "akka-scala-3.version" -> Dependencies.Versions.Scala3,
         "akka-dependencies.version" -> version.value,
