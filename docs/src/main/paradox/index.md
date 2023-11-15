@@ -13,7 +13,7 @@ Some modules in Akka do not live up to the high standards Lightbend requires to 
 | Akka (core)                           | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/)                                                                                                                                             |
 | Akka Actors                           | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/actor/typed/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/actor/typed/index.html)                                                                            |
 | Akka Cluster                          | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-cluster.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/cluster/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/cluster/index.html)                                                                            |
-| Akka Event Sourcing                   | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/index.html)                                                                |
+| Akka Event Sourcing                   | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/typed/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/typed/index.html)                                                    |
 | Akka Durable State                    | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence-durable-state.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/typed/state/javadsl/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/typed/state/scaladsl/index.html)         |
 | Akka Streams                          | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/stream/index.html) [Operators](https://doc.akka.io/docs/akka/current/stream/operators/index.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/stream/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/stream/index.html)      |
 | Akka gRPC                             | $akka-grpc.version$                  | [Documentation](https://doc.akka.io/docs/akka-grpc/current/) [ScalaDoc](https://doc.akka.io/api/akka-grpc/current/akka/grpc/)                                                                                                                                                                                          |
@@ -84,7 +84,7 @@ Akka Cluster provides a fault-tolerant decentralized peer-to-peer based Cluster 
 ### Akka Event Sourcing
 Akka Persistence enables stateful actors to persist their state so that it can be recovered when an actor is either restarted, such as after a JVM crash, by a supervisor or a manual stop-start, or migrated within a cluster.
 
-[Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/index.html)
+[Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/typed/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/typed/index.html)
 
 ### Akka Durable State
 Enables stateful actors to persist their latest state, so that it can be recovered when an actor is restarted.
@@ -264,9 +264,13 @@ Akka Management is a suite of tools for operating Akka Clusters.
 [Documentation](https://doc.akka.io/docs/akka-management/current/)
 
 @@dependency[sbt,Gradle,Maven] {
-    group="com.lightbend.akka.management"
-    artifact="akka-management_$scala.binary.version$"
-    version=$akka-management.version$
+    symbol1=AkkaManagementVersion
+    value1=$akka-management.version$
+    group=com.lightbend.akka.management  artifact="akka-management_$scala.binary.version$"                   version=AkkaManagementVersion
+    group2=com.lightbend.akka.management artifact2=akka-management-cluster-http_$scala.binary.version$       version2=AkkaManagementVersion
+    group3=com.lightbend.akka.management artifact3=akka-management-cluster-bootstrap_$scala.binary.version$  version3=AkkaManagementVersion
+    group4=com.lightbend.akka.management artifact4=akka-rolling-update-kubernetes_$scala.binary.version$     version4=AkkaManagementVersion
+    group5=com.lightbend.akka.discovery  artifact5=akka-discovery-kubernetes-api_$scala.binary.version$      version5=AkkaManagementVersion
 }
 
 ## Akka Diagnostics $akka-diagnostics.version$ 
@@ -278,9 +282,6 @@ The Akka Thread Starvation Detector is a diagnostic tool that monitors the dispa
 group=com.lightbend.akka
 artifact=akka-diagnostics_$scala.binary.version$
 version=$akka-diagnostics.version$
-group2=com.lightbend.akka
-artifact2=akka-diagnostics_$scala.binary.version$
-version2=$akka-diagnostics.version$
 }
 
 ## Alpakka $alpakka.version$
