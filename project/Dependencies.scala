@@ -5,8 +5,11 @@ object Dependencies {
     val Scala213 = "2.13.12"
     val CrossScalaVersions = Seq(Scala213)
 
+    val Scala3 = "3.3"
+
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
+    val AkkaDependenciesMinor = "23.10"
     val Akka = "2.9.0"
     val AkkaHttp = "10.6.0"
     val AkkaManagement = "1.5.0"

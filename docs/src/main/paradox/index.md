@@ -175,7 +175,7 @@ Maven
       <dependencies>
         <dependency>
           <groupId>com.lightbend.akka.grpc</groupId>
-          <artifactId>akka-grpc-runtime_2.13</artifactId>
+          <artifactId>akka-grpc-runtime_$scala.binary.version$</artifactId>
           <version>${akka.grpc.version}</version>
         </dependency>
       </dependencies>
