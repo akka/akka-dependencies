@@ -56,11 +56,14 @@ jobs:
       - name: Set up JDK 17
         uses: coursier/setup-action@v1.3.0
         with:
-          jvm: temurin:1.17.0.5
-          apps: cs
+          jvm: temurin:1.17.0
 
-      - name: sbt site
-        run: sbt docs/makeSite
-
-      - name: Run Link Validator
-        run: cs launch net.runne::site-link-validator:0.2.3 -- scripts/link-validator.conf
+      - name: Publish
+        run: |-
+          eval "$(ssh-agent -s)"
+          echo $AKKA_RSYNC_GUSTAV | base64 -d > .github/id_rsa
+          chmod 600 .github/id_rsa
+          ssh-add .github/id_rsa
+          sbt publishRsync
+        env:
+          AKKA_RSYNC_GUSTAV: ${{ secrets.AKKA_RSYNC_GUSTAV }}
