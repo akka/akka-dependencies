@@ -27,10 +27,49 @@ Some modules in Akka do not live up to the high standards Lightbend requires to 
 | Alpakka                               | $alpakka.version$                    | [Documentation](https://doc.akka.io/docs/alpakka/current/)                                                                                                                                                                                                                                                             |
 | Alpakka Kafka                         | $alpakka-kafka.version$              | [Documentation](https://doc.akka.io/docs/alpakka-kafka/current/)                                                                                                                                                                                                                                                       |
 
+## Repository
+
+The Akka dependencies are available from Akka's library repository. To access them there, you need to configure the URL for this repository.
+
+@@repository [Maven,sbt,Gradle] {
+id="akka-repository"
+name="Akka library repository"
+url="https://repo.akka.io/maven"
+}
+
 ## Akka (core) $akka.version$  
 At the core of Akka: A model for concurrency and distribution without all the pain of threading primitives.
 
 [Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/)
+
+@@dependency [Maven,sbt,Gradle] {
+symbol1=AkkaVersion
+value1="$akka.version$"
+group1="com.typesafe.akka" artifact1="akka-actor_$scala.binary.version$"               version1=AkkaVersion
+group2="com.typesafe.akka" artifact2="akka-actor-testkit-typed_$scala.binary.version$" version2=AkkaVersion scope2=test
+group3="com.typesafe.akka" artifact3="akka-actor-typed_$scala.binary.version$"         version3=AkkaVersion
+group4="com.typesafe.akka" artifact4="akka-coordination_$scala.binary.version$"        version4=AkkaVersion
+group5="com.typesafe.akka" artifact5="akka-cluster_$scala.binary.version$"             version5=AkkaVersion
+group6="com.typesafe.akka" artifact6="akka-cluster-typed_$scala.binary.version$"       version6=AkkaVersion
+group7="com.typesafe.akka" artifact7="akka-cluster-metrics_$scala.binary.version$"     version7=AkkaVersion
+group8="com.typesafe.akka" artifact8="akka-cluster-sharding_$scala.binary.version$"    version8=AkkaVersion
+group9="com.typesafe.akka" artifact9="akka-cluster-sharding-typed_$scala.binary.version$" version9=AkkaVersion
+group10="com.typesafe.akka" artifact10="akka-cluster-tools_$scala.binary.version$"        version10=AkkaVersion
+group11="com.typesafe.akka" artifact11="akka-discovery_$scala.binary.version$"            version11=AkkaVersion
+group12="com.typesafe.akka" artifact12="akka-distributed-data_$scala.binary.version$"     version12=AkkaVersion
+group13="com.typesafe.akka" artifact13="akka-multi-node-testkit_$scala.binary.version$"   version13=AkkaVersion scope13=test
+group14="com.typesafe.akka" artifact14="akka-persistence_$scala.binary.version$"          version14=AkkaVersion
+group15="com.typesafe.akka" artifact15="akka-persistence-typed_$scala.binary.version$"    version15=AkkaVersion
+group16="com.typesafe.akka" artifact16="akka-persistence-query_$scala.binary.version$"    version16=AkkaVersion
+group17="com.typesafe.akka" artifact17="akka-protobuf-v3_$scala.binary.version$"          version17=AkkaVersion
+group18="com.typesafe.akka" artifact18="akka-remote_$scala.binary.version$"               version18=AkkaVersion
+group19="com.typesafe.akka" artifact19="akka-slf4j_$scala.binary.version$"                version19=AkkaVersion
+group20="com.typesafe.akka" artifact20="akka-stream_$scala.binary.version$"               version20=AkkaVersion
+group21="com.typesafe.akka" artifact21="akka-stream-testkit_$scala.binary.version$"       version21=AkkaVersion scope21=test
+group22="com.typesafe.akka" artifact22="akka-stream-typed_$scala.binary.version$"         version22=AkkaVersion
+group23="com.typesafe.akka" artifact23="akka-testkit_$scala.binary.version$"              version23=AkkaVersion scope21=test
+}
+
 
 ### Akka Actors
 The Actor Model provides a higher level of abstraction for writing concurrent and distributed systems. It alleviates the developer from having to deal with explicit locking and thread management, making it easier to write correct concurrent and parallel systems.
@@ -64,6 +103,99 @@ Akka gRPC provides support for building streaming gRPC servers and clients on to
 
 [Documentation](https://doc.akka.io/docs/akka-grpc/current/) [ScalaDoc](https://doc.akka.io/api/akka-grpc/current/akka/grpc/)
 
+sbt
+:   @@@vars
+    ```scala
+    // in project/plugins.sbt:
+    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+    addSbtPlugin("com.lightbend.akka.grpc" % "sbt-akka-grpc" % "$akka-grpc.version$")
+    //
+    // in build.sbt:
+    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+    enablePlugins(AkkaGrpcPlugin)
+    ```
+@@@
+
+Gradle
+:   @@@vars
+    ```gradle
+    buildscript {
+      repositories {
+        gradlePluginPortal()
+        maven {
+          url "https://repo.akka.io/maven"
+        }
+      }
+    }
+    plugins {
+      id 'java'
+      id 'application'
+      id 'com.lightbend.akka.grpc.gradle' version '$akka-grpc.version$'
+    }
+    repositories {
+      mavenCentral()
+      maven {
+        url "https://repo.akka.io/maven"
+      }
+    }
+    ```
+@@@
+
+Maven
+:   @@@vars
+    ```xml
+    <project>
+      <modelVersion>4.0.0</modelVersion>
+      <name>Project name</name>
+      <groupId>com.example</groupId>
+      <artifactId>my-grpc-app</artifactId>
+      <version>0.1-SNAPSHOT</version>
+      <properties>
+        <akka.grpc.version>$akka-grpc.version$</akka.grpc.version>
+        <project.encoding>UTF-8</project.encoding>
+      </properties>
+      <repositories>
+        <repository>
+          <id>akka-repository</id>
+          <name>Akka library repository</name>
+          <url>https://repo.akka.io/maven</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>akka-repository</id>
+          <name>Akka library repository</name>
+          <url>https://repo.akka.io/maven</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <dependencies>
+        <dependency>
+          <groupId>com.lightbend.akka.grpc</groupId>
+          <artifactId>akka-grpc-runtime_2.13</artifactId>
+          <version>${akka.grpc.version}</version>
+        </dependency>
+      </dependencies>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.lightbend.akka.grpc</groupId>
+            <artifactId>akka-grpc-maven-plugin</artifactId>
+            <version>${akka.grpc.version}</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>generate</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </project>
+    ```
+    @@@
+
+
 ## Akka HTTP $akka-http.version$ 
 The Akka HTTP modules implement a full server- and client-side HTTP stack on top of Akka Actors and Akka Streams.
 
@@ -71,35 +203,85 @@ The Akka HTTP modules implement a full server- and client-side HTTP stack on top
 
 [JavaDoc](https://doc.akka.io/japi/akka-http/current/) [ScalaDoc](https://doc.akka.io/api/akka-http/current/akka/http/scaladsl/index.html)
 
+@@dependency [Maven,sbt,Gradle] {
+    symbol1=AkkaHttpVersion
+    value1="$akka-http.version$"
+    group1="com.typesafe.akka" artifact1="akka-http_$scala.binary.version$"               version1=AkkaHttpVersion
+    group2="com.typesafe.akka" artifact2="akka-http-core_$scala.binary.version$"          version2=AkkaHttpVersion
+    group3="com.typesafe.akka" artifact3="akka-http-jackson_$scala.binary.version$"       version3=AkkaHttpVersion
+    group4="com.typesafe.akka" artifact4="akka-http-spray-json_$scala.binary.version$"    version4=AkkaHttpVersion
+    group5="com.typesafe.akka" artifact5="akka-http-testkit_$scala.binary.version$"       version5=AkkaHttpVersion scope5=test
+    group6="com.typesafe.akka" artifact6="akka-http-xml_$scala.binary.version$"           version6=AkkaHttpVersion
+}
+
 ## Akka Persistence plugin for Cassandra $akka-persistence-cassandra.version$ 
 The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a backend for Akka Persistence and Akka Persistence Query.
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/)
+
+@@dependency [sbt,Maven,Gradle] {
+    group=com.typesafe.akka
+    artifact=akka-persistence-cassandra_$scala.binary.version$
+    version=$akka-persistence-cassandra.version$
+}
 
 ## Akka Persistence plugin for JDBC $akka-persistence-jdbc.version$
 The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as backend for Akka Persistence and Akka Persistence Query.
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)
 
+@@dependency [sbt,Maven,Gradle] {
+    group=com.lightbend.akka
+    artifact=akka-persistence-jdbc_$scala.binary.version$
+    version=$akka-persistence-jdbc.version$
+}
+
 ## Akka Persistence plugin for R2DBC $akka-persistence-r2dbc.version$ 
 The Akka Persistence R2DBC plugin allows for using SQL database with R2DBC as a backend for Akka Persistence.
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/)
+
+@@dependency [Maven,sbt,Gradle] {
+    group=com.lightbend.akka
+    artifact=akka-persistence-r2dbc_$scala.binary.version$
+    version=$akka-persistence-r2dbc.version$
+}
 
 ## Akka Projections $akka-projections.version$
 Akka Projections is intended for implementing Command Query Responsibility Segregation (CQRS) and Service to service communication.
 
 [Documentation](https://doc.akka.io/docs/akka-projection/current/)
 
+@@dependency [Maven,sbt,Gradle] {
+    group=com.lightbend.akka
+    artifact=akka-projection-core_$scala.binary.version$
+    version=$akka-projections.version$
+}
+
 ## Akka Management $akka-management.version$
 Akka Management is a suite of tools for operating Akka Clusters.
 
 [Documentation](https://doc.akka.io/docs/akka-management/current/)
 
+@@dependency[sbt,Gradle,Maven] {
+    group="com.lightbend.akka.management"
+    artifact="akka-management_$scala.binary.version$"
+    version=$akka-management.version$
+}
+
 ## Akka Diagnostics $akka-diagnostics.version$ 
 The Akka Thread Starvation Detector is a diagnostic tool that monitors the dispatcher of an ActorSystem and will log a warning if the dispatcher becomes unresponsive. The Config Checker tries to help you by finding potential configuration issues.
 
 [Documentation](https://doc.akka.io/docs/akka-diagnostics/current/)
+
+@@dependency [Maven,sbt,Gradle] {
+group=com.lightbend.akka
+artifact=akka-diagnostics_$scala.binary.version$
+version=$akka-diagnostics.version$
+group2=com.lightbend.akka
+artifact2=akka-diagnostics_$scala.binary.version$
+version2=$akka-diagnostics.version$
+}
 
 ## Alpakka $alpakka.version$
 The Alpakka project is an open source initiative to implement stream-aware and reactive integration pipelines for Java and Scala. It is built on top of Akka Streams.
@@ -120,6 +302,12 @@ Comma-Separated Values are used as interchange format for tabular data of text.
 Alpakka Kafka lets you connect Apache Kafka to Akka Streams.
 
 [Documentation](https://doc.akka.io/docs/alpakka-kafka/current/)
+
+@@dependency [Maven,sbt,Gradle] {
+    group=com.typesafe.akka
+    artifact=akka-stream-kafka_$scala.binary.version$
+    version=$alpakka-kafka.version$
+}
 
 ## Akka Insights
 

@@ -82,6 +82,7 @@ lazy val docs = project
         "alpakka.version" -> Dependencies.Versions.Alpakka,
         "alpakka-kafka.version" -> Dependencies.Versions.AlpakkaKafka),
     paradoxRoots := List("index.html"),
+    Compile / paradoxGroups := Map("BuildTool" -> Seq("sbt", "Maven", "Gradle")),
     resolvers += Resolver.jcenterRepo,
     publishRsyncArtifacts += makeSite.value -> "www/",
     publishRsyncHost := "akkarepo@gustav.akka.io")
