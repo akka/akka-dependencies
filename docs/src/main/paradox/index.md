@@ -7,27 +7,29 @@ Akka is certified for use with certain Java versions, see @ref[Java Versions](ja
 
 Some modules in Akka do not live up to the high standards Lightbend requires to fully support them for Akka Licensees. Modules are marked with their @ref[readiness level](support-terminology.md) in the "project info" section of their documentation.
 
-| Module                     | Current version                      | Documentation                                                                                                                                                                                                                                                                                                 |
-|----------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Akka Dependencies BOM      | $akka-dependencies.version$          |  |
-| Akka (core)                | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/)                                                                                                                                        |
-| Akka Actors                | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/actor/typed/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/actor/typed/index.html)                                                                       |
-| Akka Cluster               | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-cluster.html)                                                                                                                                                                                                                                   |
-| Akka Event Sourcing        | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/index.html)                                                           |
-| Akka Durable State         | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence-durable-state.html)                                                                                                                                                                                                                 |
-| Akka Streams               | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/stream/index.html) [Operators](https://doc.akka.io/docs/akka/current/stream/operators/index.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/stream/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/stream/index.html) |
-| Akka gRPC                  | $akka-grpc.version$                  | [Documentation](https://doc.akka.io/docs/akka-grpc/current/)                                                                                                                                                                                                                                                      |
-| Akka HTTP                  | $akka-http.version$                  | [Documentation](https://doc.akka.io/docs/akka-http/current/)                                                                                                                                                                                                                                                      |
-| Akka Persistence Cassandra | $akka-persistence-cassandra.version$ | [Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/)                                                                                                                                                                                                                                     |
-| Akka Persistence JDBC      | $akka-persistence-jdbc.version$      | [Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)                                                                                                                                                                                                                                          |
-| Akka Persistence R2DBC     | $akka-persistence-r2dbc.version$     | [Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/)                                                                                                                                                                                                                                         |
-| Akka Projections           | $akka-projections.version$           | [Documentation](https://doc.akka.io/docs/akka-projection/current/)                                                                                                                                                                                                                                               |
-| Akka Management            | $akka-management.version$            | [Documentation](https://doc.akka.io/docs/akka-management/current/)                                                                                                                                                                                                                                                |
-| Akka Diagnostics           | $akka-diagnostics.version$           | [Documentation](https://doc.akka.io/docs/akka-diagnostics/current/)                                                                                                                                                                                                                                               |
-| Alpakka                    | $alpakka.version$                    | [Documentation](https://doc.akka.io/docs/alpakka/current/)                                                                                                                                                                                                                                                        |
-| Alpakka Kafka              | $alpakka-kafka.version$              | [Documentation](https://doc.akka.io/docs/alpakka-kafka/current/)                                                                                                                                                                                                                                                  |
+| Module                                | Current version                      | Documentation                                                                                                                                                                                                                                                                                                          |
+|---------------------------------------|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Akka Dependencies BOM                 | $akka-dependencies.version$          |                                                                                                                                                                                                                                                                                                                        |
+| Akka (core)                           | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/)                                                                                                                                             |
+| Akka Actors                           | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/actor/typed/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/actor/typed/index.html)                                                                            |
+| Akka Cluster                          | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-cluster.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/cluster/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/cluster/index.html)                                                                            |
+| Akka Event Sourcing                   | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/index.html)                                                                |
+| Akka Durable State                    | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence-durable-state.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/typed/state/javadsl/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/typed/state/scaladsl/index.html)         |
+| Akka Streams                          | $akka.version$                       | [Documentation](https://doc.akka.io/docs/akka/current/stream/index.html) [Operators](https://doc.akka.io/docs/akka/current/stream/operators/index.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/stream/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/stream/index.html)      |
+| Akka gRPC                             | $akka-grpc.version$                  | [Documentation](https://doc.akka.io/docs/akka-grpc/current/) [ScalaDoc](https://doc.akka.io/api/akka-grpc/current/akka/grpc/)                                                                                                                                                                                          |
+| Akka HTTP                             | $akka-http.version$                  | [Documentation](https://doc.akka.io/docs/akka-http/current/) [Predefined Directives](https://doc.akka.io/docs/akka-http/current/routing-dsl/directives/alphabetically.html) [JavaDoc](https://doc.akka.io/japi/akka-http/current/) [ScalaDoc](https://doc.akka.io/api/akka-http/current/akka/http/scaladsl/index.html) |
+| Akka Persistence plugin for Cassandra | $akka-persistence-cassandra.version$ | [Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/)                                                                                                                                                                                                                                          |
+| Akka Persistence plugin for JDBC                 | $akka-persistence-jdbc.version$      | [Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)                                                                                                                                                                                                                                               |
+| Akka Persistence plugin for R2DBC                | $akka-persistence-r2dbc.version$     | [Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/)                                                                                                                                                                                                                                              |
+| Akka Projections                      | $akka-projections.version$           | [Documentation](https://doc.akka.io/docs/akka-projection/current/)                                                                                                                                                                                                                                                     |
+| Akka Management                       | $akka-management.version$            | [Documentation](https://doc.akka.io/docs/akka-management/current/)                                                                                                                                                                                                                                                     |
+| Akka Diagnostics                      | $akka-diagnostics.version$           | [Documentation](https://doc.akka.io/docs/akka-diagnostics/current/)                                                                                                                                                                                                                                                    |
+| Alpakka                               | $alpakka.version$                    | [Documentation](https://doc.akka.io/docs/alpakka/current/)                                                                                                                                                                                                                                                             |
+| Alpakka Kafka                         | $alpakka-kafka.version$              | [Documentation](https://doc.akka.io/docs/alpakka-kafka/current/)                                                                                                                                                                                                                                                       |
 
 ## Akka (core) $akka.version$  
+At the core of Akka: A model for concurrency and distribution without all the pain of threading primitives.
+
 [Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/)
 
 ### Akka Actors
@@ -38,7 +40,7 @@ The Actor Model provides a higher level of abstraction for writing concurrent an
 ### Akka Cluster
 Akka Cluster provides a fault-tolerant decentralized peer-to-peer based Cluster Membership Service with no single point of failure or single point of bottleneck. It does this using gossip protocols and an automatic failure detector.
 
-[Documentation](https://doc.akka.io/docs/akka/current/typed/index-cluster.html)
+[Documentation](https://doc.akka.io/docs/akka/current/typed/index-cluster.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/cluster/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/cluster/index.html)
 
 ### Akka Event Sourcing
 Akka Persistence enables stateful actors to persist their state so that it can be recovered when an actor is either restarted, such as after a JVM crash, by a supervisor or a manual stop-start, or migrated within a cluster.
@@ -46,23 +48,28 @@ Akka Persistence enables stateful actors to persist their state so that it can b
 [Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/index.html)
 
 ### Akka Durable State
-This model of Akka Persistence enables a stateful actor / entity to store the full state after processing each command instead of using event sourcing.
+Enables stateful actors to persist their latest state, so that it can be recovered when an actor is restarted.
 
-[Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence-durable-state.html)
+[Documentation](https://doc.akka.io/docs/akka/current/typed/index-persistence-durable-state.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/persistence/typed/state/javadsl/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/persistence/typed/state/scaladsl/index.html)
 
 ### Akka Streams
+An intuitive and safe way to do asynchronous, non-blocking backpressured stream processing.
 
-[Documentation](https://doc.akka.io/docs/akka/current/stream/index.html) [Operators](https://doc.akka.io/docs/akka/current/stream/operators/index.html) [JavaDoc](https://doc.akka.io/japi/akka/current/akka/stream/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/stream/index.html)
+[Documentation](https://doc.akka.io/docs/akka/current/stream/index.html) [Operators](https://doc.akka.io/docs/akka/current/stream/operators/index.html) 
+
+[JavaDoc](https://doc.akka.io/japi/akka/current/akka/stream/package-summary.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/stream/index.html)
 
 ## Akka gRPC $akka-grpc.version$
 Akka gRPC provides support for building streaming gRPC servers and clients on top of Akka Streams and Akka HTTP.
 
-[Documentation](https://doc.akka.io/docs/akka-grpc/current/)
+[Documentation](https://doc.akka.io/docs/akka-grpc/current/) [ScalaDoc](https://doc.akka.io/api/akka-grpc/current/akka/grpc/)
 
 ## Akka HTTP $akka-http.version$ 
 The Akka HTTP modules implement a full server- and client-side HTTP stack on top of Akka Actors and Akka Streams.
 
-[Documentation](https://doc.akka.io/docs/akka-http/current/)
+[Documentation](https://doc.akka.io/docs/akka-http/current/) [Predefined Directives](https://doc.akka.io/docs/akka-http/current/routing-dsl/directives/alphabetically.html) 
+
+[JavaDoc](https://doc.akka.io/japi/akka-http/current/) [ScalaDoc](https://doc.akka.io/api/akka-http/current/akka/http/scaladsl/index.html)
 
 ## Akka Persistence plugin for Cassandra $akka-persistence-cassandra.version$ 
 The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a backend for Akka Persistence and Akka Persistence Query.
@@ -85,7 +92,6 @@ Akka Projections is intended for implementing Command Query Responsibility Segre
 [Documentation](https://doc.akka.io/docs/akka-projection/current/)
 
 ## Akka Management $akka-management.version$
-
 Akka Management is a suite of tools for operating Akka Clusters.
 
 [Documentation](https://doc.akka.io/docs/akka-management/current/)
