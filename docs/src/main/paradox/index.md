@@ -107,44 +107,6 @@ Akka gRPC provides support for building streaming gRPC servers and clients on to
 
 [Documentation](https://doc.akka.io/docs/akka-grpc/current/) [ScalaDoc](https://doc.akka.io/api/akka-grpc/current/akka/grpc/)
 
-sbt
-:   @@@vars
-    ```scala
-    // in project/plugins.sbt:
-    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
-    addSbtPlugin("com.lightbend.akka.grpc" % "sbt-akka-grpc" % "$akka-grpc.version$")
-    //
-    // in build.sbt:
-    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
-    enablePlugins(AkkaGrpcPlugin)
-    ```
-@@@
-
-Gradle
-:   @@@vars
-    ```gradle
-    buildscript {
-      repositories {
-        gradlePluginPortal()
-        maven {
-          url "https://repo.akka.io/maven"
-        }
-      }
-    }
-    plugins {
-      id 'java'
-      id 'application'
-      id 'com.lightbend.akka.grpc.gradle' version '$akka-grpc.version$'
-    }
-    repositories {
-      mavenCentral()
-      maven {
-        url "https://repo.akka.io/maven"
-      }
-    }
-    ```
-@@@
-
 Maven
 :   @@@vars
     ```xml
@@ -199,6 +161,43 @@ Maven
     ```
     @@@
 
+sbt
+:   @@@vars
+    ```scala
+    // in project/plugins.sbt:
+    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+    addSbtPlugin("com.lightbend.akka.grpc" % "sbt-akka-grpc" % "$akka-grpc.version$")
+    //
+    // in build.sbt:
+    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+    enablePlugins(AkkaGrpcPlugin)
+    ```
+@@@
+
+Gradle
+:   @@@vars
+    ```gradle
+    buildscript {
+      repositories {
+        gradlePluginPortal()
+        maven {
+          url "https://repo.akka.io/maven"
+        }
+      }
+    }
+    plugins {
+      id 'java'
+      id 'application'
+      id 'com.lightbend.akka.grpc.gradle' version '$akka-grpc.version$'
+    }
+    repositories {
+      mavenCentral()
+      maven {
+        url "https://repo.akka.io/maven"
+      }
+    }
+    ```
+@@@
 
 ## Akka HTTP $akka-http.version$ 
 The Akka HTTP modules implement a full server- and client-side HTTP stack on top of Akka Actors and Akka Streams.
@@ -227,7 +226,7 @@ The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a bac
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/)
 
-@@dependency [sbt,Maven,Gradle] {
+@@dependency [Maven,sbt,Gradle] {
     group=com.typesafe.akka
     artifact=akka-persistence-cassandra_$scala.binary.version$
     version=$akka-persistence-cassandra.version$
@@ -238,7 +237,7 @@ The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as ba
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)
 
-@@dependency [sbt,Maven,Gradle] {
+@@dependency [Maven,sbt,Gradle] {
     group=com.lightbend.akka
     artifact=akka-persistence-jdbc_$scala.binary.version$
     version=$akka-persistence-jdbc.version$
@@ -275,7 +274,7 @@ Akka Management is a suite of tools for operating Akka Clusters.
 
 Check the [documentation](https://doc.akka.io/docs/akka-management/current/) to learn which dependencies you require.
 
-@@dependency[sbt,Gradle,Maven] {
+@@dependency[Maven,sbt,Gradle] {
     symbol1=AkkaManagementVersion
     value1=$akka-management.version$
     group=com.lightbend.akka.management  artifact="akka-management_$scala.binary.version$"                   version=AkkaManagementVersion
