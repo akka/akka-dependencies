@@ -18,7 +18,7 @@ object Dependencies {
     val AkkaPersistenceCassandra = "1.2.0"
     val AkkaPersistenceJdbc = "5.3.0"
     val AkkaPersistenceR2dbc = "1.2.0"
-    val Alpakka = "7.0.0"
+    val Alpakka = "7.0.1"
     val AlpakkaKafka = "5.0.0"
     val AkkaDiagnostics = "2.1.0"
   }
