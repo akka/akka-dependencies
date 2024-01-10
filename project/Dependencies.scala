@@ -10,14 +10,14 @@ object Dependencies {
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
     val AkkaDependenciesMinor = "23.10"
-    val Akka = "2.9.0"
+    val Akka = "2.9.1"
     val AkkaHttp = "10.6.0"
     val AkkaManagement = "1.5.0"
-    val AkkaProjections = "1.5.0"
+    val AkkaProjections = "1.5.1"
     val AkkaGrpc = "2.4.0"
     val AkkaPersistenceCassandra = "1.2.0"
     val AkkaPersistenceJdbc = "5.3.0"
-    val AkkaPersistenceR2dbc = "1.2.0"
+    val AkkaPersistenceR2dbc = "1.2.1"
     val Alpakka = "7.0.1"
     val AlpakkaKafka = "5.0.0"
     val AkkaDiagnostics = "2.1.0"
