@@ -222,7 +222,7 @@ Check the [documentation](https://doc.akka.io/docs/akka-http/current/) to learn 
 }
 
 ## Akka Persistence plugin for Cassandra $akka-persistence-cassandra.version$ 
-The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a backend for Akka Persistence and Akka Persistence Query.
+The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a backend for [Akka Persistence](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) and [Akka Persistence Query](https://doc.akka.io/docs/akka/current/persistence-query.html).
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/)
 
@@ -233,7 +233,7 @@ The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a bac
 }
 
 ## Akka Persistence plugin for JDBC $akka-persistence-jdbc.version$
-The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as backend for Akka Persistence and Akka Persistence Query.
+The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as backend for [Akka Persistence](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) and [Akka Persistence Query](https://doc.akka.io/docs/akka/current/persistence-query.html).
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)
 
@@ -244,7 +244,7 @@ The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as ba
 }
 
 ## Akka Persistence plugin for R2DBC $akka-persistence-r2dbc.version$ 
-The Akka Persistence R2DBC plugin allows for using SQL database with R2DBC as a backend for Akka Persistence.
+The Akka Persistence R2DBC plugin allows for using SQL database with R2DBC as a backend for [Akka Persistence](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) and [Akka Persistence Query](https://doc.akka.io/docs/akka/current/persistence-query.html).
 
 [Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/)
 
