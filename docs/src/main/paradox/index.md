@@ -7,6 +7,8 @@ Akka is certified for use with certain Java versions, see @ref[Java Versions](ja
 
 Some modules in Akka do not live up to the high standards Lightbend requires to fully support them for Akka Licensees. Modules are marked with their @ref[readiness level](support-terminology.md) in the "project info" section of their documentation.
 
+Akka is licensed under the Business Source License 1.1, please see [Akka License FAQ](https://www.lightbend.com/akka/license-faq).
+
 | Module                                | Current version                      | Documentation                                                                                                                                                                                                                                                                                                          |
 |---------------------------------------|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Akka Dependencies BOM                 | $akka-dependencies.version$          |                                                                                                                                                                                                                                                                                                                        |
@@ -19,13 +21,14 @@ Some modules in Akka do not live up to the high standards Lightbend requires to 
 | Akka gRPC                             | $akka-grpc.version$                  | [Documentation](https://doc.akka.io/docs/akka-grpc/current/) [ScalaDoc](https://doc.akka.io/api/akka-grpc/current/akka/grpc/)                                                                                                                                                                                          |
 | Akka HTTP                             | $akka-http.version$                  | [Documentation](https://doc.akka.io/docs/akka-http/current/) [Predefined Directives](https://doc.akka.io/docs/akka-http/current/routing-dsl/directives/alphabetically.html) [JavaDoc](https://doc.akka.io/japi/akka-http/current/) [ScalaDoc](https://doc.akka.io/api/akka-http/current/akka/http/scaladsl/index.html) |
 | Akka Persistence plugin for Cassandra | $akka-persistence-cassandra.version$ | [Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/)                                                                                                                                                                                                                                          |
-| Akka Persistence plugin for JDBC                 | $akka-persistence-jdbc.version$      | [Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)                                                                                                                                                                                                                                               |
-| Akka Persistence plugin for R2DBC                | $akka-persistence-r2dbc.version$     | [Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/)                                                                                                                                                                                                                                              |
+| Akka Persistence plugin for JDBC      | $akka-persistence-jdbc.version$      | [Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)                                                                                                                                                                                                                                               |
+| Akka Persistence plugin for R2DBC     | $akka-persistence-r2dbc.version$     | [Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/)                                                                                                                                                                                                                                              |
 | Akka Projections                      | $akka-projections.version$           | [Documentation](https://doc.akka.io/docs/akka-projection/current/)                                                                                                                                                                                                                                                     |
 | Akka Management                       | $akka-management.version$            | [Documentation](https://doc.akka.io/docs/akka-management/current/)                                                                                                                                                                                                                                                     |
 | Akka Diagnostics                      | $akka-diagnostics.version$           | [Documentation](https://doc.akka.io/docs/akka-diagnostics/current/)                                                                                                                                                                                                                                                    |
 | Alpakka                               | $alpakka.version$                    | [Documentation](https://doc.akka.io/docs/alpakka/current/)                                                                                                                                                                                                                                                             |
 | Alpakka Kafka                         | $alpakka-kafka.version$              | [Documentation](https://doc.akka.io/docs/alpakka-kafka/current/)                                                                                                                                                                                                                                                       |
+| Akka Edge Rust                        | $akka-edge-rust.version$             | [Guide](https://doc.akka.io/docs/akka-edge/current/guide-rs.html) [API](https://doc.akka.io/api/akka-edge-rs/current/)                                                                                                                                                                                                 |
 
 ## Repository
 
@@ -321,6 +324,16 @@ Alpakka Kafka lets you connect Apache Kafka to Akka Streams.
     version=$alpakka-kafka.version$
 }
 
+## Akka Edge Rust $akka-edge-rust.version$ *@ref[Incubating](support-terminology.md#incubating)*
+
+*Extending the power of Akka’s event-driven model to resource-constrained devices.*
+
+Akka Edge support in Rust is designed to empower Akka developers at the edge. Akka Edge Rust brings the concepts of Command and Query Responsibility Segregation (CQRS) to developers familiar with Akka Persistence and Projections recognizing the resource constraints present at the edge.
+
+[Guide](https://doc.akka.io/docs/akka-edge/current/guide-rs.html)
+
+[API](https://doc.akka.io/api/akka-edge-rs/current/)
+
 ## Akka Insights
 
 [Lightbend Telemetry](https://developer.lightbend.com/docs/telemetry/current/home.html) provides a view into the distributed applications at runtime. This view allows developers and operations to respond quickly to problems, track down unexpected behavior and tune the system.
@@ -342,7 +355,7 @@ Connect Akka services across geographical locations for lower latency and higher
 
 ### Edge
 
-Move your endpoints to the edge of the cloud for lower latency and higher availability. [Akka Edge](https://doc.akka.io/docs/akka-edge/current/index.html)
+Move your endpoints to the edge of the cloud for lower latency and higher availability. *Akka Edge Rust* extends the power of Akka’s event-driven model to resource-constrained devices. [Akka Edge](https://doc.akka.io/docs/akka-edge/current/index.html)
 
 
 @@@ index

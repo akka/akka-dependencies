@@ -21,6 +21,7 @@ object Dependencies {
     val Alpakka = "7.0.1"
     val AlpakkaKafka = "5.0.0"
     val AkkaDiagnostics = "2.1.0"
+    val AkkaEdgeRust = "0.7.0"
   }
 
   import Versions._
