@@ -328,7 +328,7 @@ Alpakka Kafka lets you connect Apache Kafka to Akka Streams.
 
 *Extending the power of Akka’s event-driven model to resource-constrained devices.*
 
-Akka Edge support in Rust is designed to empower Akka developers at the edge. Akka Edge Rust brings the concepts of Command and Query Responsibility Segregation (CQRS) to developers familiar with Akka Persistence and Projections recognizing the resource constraints present at the edge.
+Akka Edge support in Rust is designed to empower Akka developers at the edge. Recognizing the resource constraints present at the edge, Akka Edge Rust enables event-driven solutions for developers familiar with Akka Persistence and Projections.
 
 [Guide](https://doc.akka.io/docs/akka-edge/current/guide-rs.html)
 
