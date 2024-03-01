@@ -324,7 +324,9 @@ Alpakka Kafka lets you connect Apache Kafka to Akka Streams.
     version=$alpakka-kafka.version$
 }
 
-## Akka Edge Rust $akka-edge-rust.version$ *@ref[Incubating](support-terminology.md#incubating)*
+## Akka Edge Rust $akka-edge-rust.version$ 
+
+*@ref[Incubating](support-terminology.md#incubating)*
 
 *Extending the power of Akka’s event-driven model to resource-constrained devices.*
 
