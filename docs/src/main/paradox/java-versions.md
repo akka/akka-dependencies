@@ -2,7 +2,7 @@
 
 ## Java 21
 
-We are currently in the process of certifying [Temurin 21](https://adoptium.net/en-GB/marketplace/?version=21&os=any&arch=any) builds for use with Akka.
+[Temurin 21](https://adoptium.net/en-GB/marketplace/?version=21&os=any&arch=any) are and Red Hat Enterprise Linux builds of OpenJDK 21 are @ref[certified](support-terminology.md#certified) for use with some components of the Lightbend Platform.
 
 ## Java 17
 
