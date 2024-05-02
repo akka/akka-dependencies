@@ -11,7 +11,7 @@ object Dependencies {
     // in project/plugins.sbt
     val AkkaDependenciesMinor = "23.10"
     val Akka = "2.9.2"
-    val AkkaHttp = "10.6.1"
+    val AkkaHttp = "10.6.2"
     val AkkaManagement = "1.5.1"
     val AkkaProjections = "1.5.3"
     val AkkaGrpc = "2.4.1"
