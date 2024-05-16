@@ -43,7 +43,7 @@ url="https://repo.akka.io/maven"
 ## Akka (core) $akka.version$  
 At the core of Akka: A model for concurrency and distribution without all the pain of threading primitives.
 
-[Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/)
+[Documentation](https://doc.akka.io/docs/akka/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/) [Migration guides](https://doc.akka.io/docs/akka/current/project/migration-guides.html)
 
 #### Complete dependency listing of Akka core modules
 
@@ -205,7 +205,7 @@ Gradle
 ## Akka HTTP $akka-http.version$ 
 The Akka HTTP modules implement a full server- and client-side HTTP stack on top of Akka Actors and Akka Streams.
 
-[Documentation](https://doc.akka.io/docs/akka-http/current/) [Predefined Directives](https://doc.akka.io/docs/akka-http/current/routing-dsl/directives/alphabetically.html) 
+[Documentation](https://doc.akka.io/docs/akka-http/current/) [Predefined Directives](https://doc.akka.io/docs/akka-http/current/routing-dsl/directives/alphabetically.html) [Migration guides](https://doc.akka.io/docs/akka-http/current/migration-guide/index.html)
 
 [JavaDoc](https://doc.akka.io/japi/akka-http/current/) [ScalaDoc](https://doc.akka.io/api/akka-http/current/akka/http/scaladsl/index.html)
 
@@ -227,7 +227,7 @@ Check the [documentation](https://doc.akka.io/docs/akka-http/current/) to learn 
 ## Akka Persistence plugin for Cassandra $akka-persistence-cassandra.version$ 
 The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a backend for [Akka Persistence](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) and [Akka Persistence Query](https://doc.akka.io/docs/akka/current/persistence-query.html).
 
-[Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/)
+[Documentation](https://doc.akka.io/docs/akka-persistence-cassandra/current/) [Migration guides](https://doc.akka.io/docs/akka-persistence-cassandra/current/migrations.html)
 
 @@dependency [Maven,sbt,Gradle] {
     group=com.typesafe.akka
@@ -238,7 +238,7 @@ The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a bac
 ## Akka Persistence plugin for JDBC $akka-persistence-jdbc.version$
 The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as backend for [Akka Persistence](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) and [Akka Persistence Query](https://doc.akka.io/docs/akka/current/persistence-query.html).
 
-[Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/)
+[Documentation](https://doc.akka.io/docs/akka-persistence-jdbc/current/) [Migration guides](https://doc.akka.io/docs/akka-persistence-jdbc/current/migration.html)
 
 @@dependency [Maven,sbt,Gradle] {
     group=com.lightbend.akka
@@ -249,7 +249,8 @@ The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as ba
 ## Akka Persistence plugin for R2DBC $akka-persistence-r2dbc.version$ 
 The Akka Persistence R2DBC plugin allows for using SQL database with R2DBC as a backend for [Akka Persistence](https://doc.akka.io/docs/akka/current/typed/index-persistence.html) and [Akka Persistence Query](https://doc.akka.io/docs/akka/current/persistence-query.html).
 
-[Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/)
+[Documentation](https://doc.akka.io/docs/akka-persistence-r2dbc/current/) [Migration guides](https://doc.akka.io/docs/akka-persistence-r2dbc/current/migration.html)
+
 
 @@dependency [Maven,sbt,Gradle] {
     group=com.lightbend.akka
@@ -271,7 +272,7 @@ Akka Projections is intended for implementing Command Query Responsibility Segre
 ## Akka Management $akka-management.version$
 Akka Management is a suite of tools for operating Akka Clusters.
 
-[Documentation](https://doc.akka.io/docs/akka-management/current/)
+[Documentation](https://doc.akka.io/docs/akka-management/current/) [Migration guides](https://doc.akka.io/docs/akka-management/current/migration.html)
 
 #### Complete dependency listing of Akka Management modules
 
