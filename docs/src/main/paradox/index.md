@@ -337,15 +337,16 @@ Akka Edge support in Rust is designed to empower Akka developers at the edge. Re
 
 [API](https://doc.akka.io/api/akka-edge-rs/current/)
 
-## Akka Insights
+## Akka Insights / Lightbend Telemetry
 
 [Lightbend Telemetry](https://developer.lightbend.com/docs/telemetry/current/home.html) provides a view into the distributed applications at runtime. This view allows developers and operations to respond quickly to problems, track down unexpected behavior and tune the system.
 
-| Akka | Compatible Akka Insights |
-|------|--------------------------|
-| Akka 23.10 | Lightbend Telemetry version 2.19 |
-| Akka 23.05 | Lightbend Telemetry version 2.18 |
-| Akka 22.10 (and older) | Lightbend Telemetry version 2.17 |
+| Akka                   | Compatible Akka Insights         |                                                                                  |
+|------------------------|----------------------------------|----------------------------------------------------------------------------------|
+| Akka 24.05             | Lightbend Telemetry version 2.20 | [Documentation](https://developer.lightbend.com/docs/telemetry/current/home.html) |
+| Akka 23.10             | Lightbend Telemetry version 2.19 | [Documentation](https://developer.lightbend.com/docs/telemetry/2.19.x/home.html) |
+| Akka 23.05             | Lightbend Telemetry version 2.18 | [Documentation](https://developer.lightbend.com/docs/telemetry/2.18.x/home.html) |
+| Akka 22.10 (and older) | Lightbend Telemetry version 2.17 | [Documentation](https://developer.lightbend.com/docs/telemetry/2.17.x/home.html) |
 
 ## Architecture
       
