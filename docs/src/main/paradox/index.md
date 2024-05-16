@@ -349,7 +349,7 @@ Akka Edge support in Rust is designed to empower Akka developers at the edge. Re
 ## Architecture
       
 ### Microservices
-Tutorial bringing together essential parts of Akka to build resilient and scalable microservices. [Akka Guide](https://developer.lightbend.com/docs/akka-guide/microservices-tutorial/index.html)
+Tutorial bringing together essential parts of Akka to build resilient and scalable microservices. [Akka Guide](https://doc.akka.io/guide/microservices-tutorial/index.html )
 
 ### Distributed Cluster
 
