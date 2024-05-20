@@ -23,7 +23,12 @@ lazy val `akka-dependencies` =
       name := "akka-dependencies",
       description := s"${description.value} (depending on Scala ${CrossVersion.binaryScalaVersion(scalaVersion.value)})",
       homepage := Some(url("https://akka.io/")),
-      licenses := Seq(("BUSL-1.1", url("https://raw.githubusercontent.com/akka/akka-dependencies/v23.10.0/LICENSE"))),
+      licenses := {
+        val tagOrBranch =
+          if (isSnapshot.value) "main"
+          else "v" + version.value
+        Seq(("BUSL-1.1", url(s"https://raw.githubusercontent.com/akka/akka-dependencies/$tagOrBranch/LICENSE")))
+      },
       developers := List(
           Developer(
             "akka-contributors",
