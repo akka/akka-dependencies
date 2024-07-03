@@ -67,7 +67,7 @@ group12="com.typesafe.akka" artifact12="akka-distributed-data_$scala.binary.vers
 group13="com.typesafe.akka" artifact13="akka-multi-node-testkit_$scala.binary.version$"   version13=AkkaVersion scope13=test
 group14="com.typesafe.akka" artifact14="akka-persistence_$scala.binary.version$"          version14=AkkaVersion
 group15="com.typesafe.akka" artifact15="akka-persistence-tck_$scala.binary.version$"      version15=AkkaVersion
-group16="com.typesafe.akka" artifact15="akka-persistence-typed_$scala.binary.version$"    version15=AkkaVersion
+group16="com.typesafe.akka" artifact16="akka-persistence-typed_$scala.binary.version$"    version16=AkkaVersion
 group17="com.typesafe.akka" artifact17="akka-persistence-query_$scala.binary.version$"    version17=AkkaVersion
 group18="com.typesafe.akka" artifact18="akka-protobuf-v3_$scala.binary.version$"          version18=AkkaVersion
 group19="com.typesafe.akka" artifact19="akka-remote_$scala.binary.version$"               version19=AkkaVersion
