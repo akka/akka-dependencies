@@ -66,15 +66,16 @@ group11="com.typesafe.akka" artifact11="akka-discovery_$scala.binary.version$"  
 group12="com.typesafe.akka" artifact12="akka-distributed-data_$scala.binary.version$"     version12=AkkaVersion
 group13="com.typesafe.akka" artifact13="akka-multi-node-testkit_$scala.binary.version$"   version13=AkkaVersion scope13=test
 group14="com.typesafe.akka" artifact14="akka-persistence_$scala.binary.version$"          version14=AkkaVersion
-group15="com.typesafe.akka" artifact15="akka-persistence-typed_$scala.binary.version$"    version15=AkkaVersion
-group16="com.typesafe.akka" artifact16="akka-persistence-query_$scala.binary.version$"    version16=AkkaVersion
-group17="com.typesafe.akka" artifact17="akka-protobuf-v3_$scala.binary.version$"          version17=AkkaVersion
-group18="com.typesafe.akka" artifact18="akka-remote_$scala.binary.version$"               version18=AkkaVersion
-group19="com.typesafe.akka" artifact19="akka-slf4j_$scala.binary.version$"                version19=AkkaVersion
-group20="com.typesafe.akka" artifact20="akka-stream_$scala.binary.version$"               version20=AkkaVersion
-group21="com.typesafe.akka" artifact21="akka-stream-testkit_$scala.binary.version$"       version21=AkkaVersion scope21=test
-group22="com.typesafe.akka" artifact22="akka-stream-typed_$scala.binary.version$"         version22=AkkaVersion
-group23="com.typesafe.akka" artifact23="akka-testkit_$scala.binary.version$"              version23=AkkaVersion scope21=test
+group15="com.typesafe.akka" artifact15="akka-persistence-tck_$scala.binary.version$"      version15=AkkaVersion
+group16="com.typesafe.akka" artifact15="akka-persistence-typed_$scala.binary.version$"    version15=AkkaVersion
+group17="com.typesafe.akka" artifact17="akka-persistence-query_$scala.binary.version$"    version17=AkkaVersion
+group18="com.typesafe.akka" artifact18="akka-protobuf-v3_$scala.binary.version$"          version18=AkkaVersion
+group19="com.typesafe.akka" artifact19="akka-remote_$scala.binary.version$"               version19=AkkaVersion
+group20="com.typesafe.akka" artifact20="akka-slf4j_$scala.binary.version$"                version20=AkkaVersion
+group21="com.typesafe.akka" artifact21="akka-stream_$scala.binary.version$"               version21=AkkaVersion
+group22="com.typesafe.akka" artifact22="akka-stream-testkit_$scala.binary.version$"       version22=AkkaVersion scope21=test
+group23="com.typesafe.akka" artifact23="akka-stream-typed_$scala.binary.version$"         version23=AkkaVersion
+group24="com.typesafe.akka" artifact24="akka-testkit_$scala.binary.version$"              version24=AkkaVersion scope21=test
 }
 
 
