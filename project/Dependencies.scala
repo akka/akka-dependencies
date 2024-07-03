@@ -47,6 +47,7 @@ object Dependencies {
     "com.typesafe.akka" %% "akka-multi-node-testkit" % Akka,
     "com.typesafe.akka" %% "akka-persistence" % Akka,
     "com.typesafe.akka" %% "akka-persistence-query" % Akka,
+    "com.typesafe.akka" %% "akka-persistence-tck" % Akka,
     "com.typesafe.akka" %% "akka-persistence-typed" % Akka,
     "com.typesafe.akka" %% "akka-persistence-testkit" % Akka,
     "com.typesafe.akka" %% "akka-protobuf-v3" % Akka,
