@@ -342,12 +342,13 @@ Akka Edge support in Rust is designed to empower Akka developers at the edge. Re
 
 [Akka Insights](https://doc.akka.io/libraries/akka-insights/current/index.html) provides a view into the distributed applications at runtime. This view allows developers and operations to respond quickly to problems, track down unexpected behavior and tune the system.
 
-| Akka                   | Compatible Akka Insights         |                                                                                  |
-|------------------------|----------------------------------|----------------------------------------------------------------------------------|
-| Akka 24.05             | Lightbend Telemetry version 2.20 | [Documentation](https://developer.lightbend.com/docs/telemetry/current/home.html) |
-| Akka 23.10             | Lightbend Telemetry version 2.19 | [Documentation](https://developer.lightbend.com/docs/telemetry/2.19.x/home.html) |
-| Akka 23.05             | Lightbend Telemetry version 2.18 | [Documentation](https://developer.lightbend.com/docs/telemetry/2.18.x/home.html) |
-| Akka 22.10 (and older) | Lightbend Telemetry version 2.17 | [Documentation](https://developer.lightbend.com/docs/telemetry/2.17.x/home.html) |
+| Akka                   | Compatible Akka Insights         |                                                                                      |
+|------------------------|----------------------------------|--------------------------------------------------------------------------------------|
+| Akka 24.10           | Akka Insights version 2.21       | [Documentation](https://doc.akka.io/libraries/akka-insights/current/)                |
+| Akka 24.05             | Lightbend Telemetry version 2.20 | [Documentation](https://doc.akka.io/libraries/akka-insights/2.20/home.html)          |
+| Akka 23.10             | Lightbend Telemetry version 2.19 | [Documentation](https://doc.akka.io/libraries/akka-insights/2.19/home.html)          |
+| Akka 23.05             | Lightbend Telemetry version 2.18 | [Documentation](https://doc.akka.io/libraries/akka-insights/2.18/home.)              |
+| Akka 22.10 (and older) | Lightbend Telemetry version 2.17 | [Documentation](https://doc.akka.io/libraries/akka-insights/2.17/home.html)        |
 
 ## Architecture
       
