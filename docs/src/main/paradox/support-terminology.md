@@ -1,4 +1,4 @@
-# Lightbend support terminology
+# Support terminology
 
 Lightbend uses the following terminology to designate the level of support provided for products or specific components of products that are included in Lightbend's services.
 
