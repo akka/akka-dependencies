@@ -82,6 +82,7 @@ lazy val docs = project
         "akka-diagnostics.version" -> Dependencies.Versions.AkkaDiagnostics,
         "akka-projections.version" -> Dependencies.Versions.AkkaProjections,
         "akka-persistence-cassandra.version" -> Dependencies.Versions.AkkaPersistenceCassandra,
+        "akka-persistence-dynamodb.version" -> Dependencies.Versions.AkkaPersistenceDynamoDb,
         "akka-persistence-jdbc.version" -> Dependencies.Versions.AkkaPersistenceJdbc,
         "akka-persistence-r2dbc.version" -> Dependencies.Versions.AkkaPersistenceR2dbc,
         "alpakka.version" -> Dependencies.Versions.Alpakka,

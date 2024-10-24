@@ -236,6 +236,17 @@ The Akka Persistence Cassandra plugin allows for using Apache Cassandra as a bac
     version=$akka-persistence-cassandra.version$
 }
 
+## Akka Persistence plugin for DynamoDB $akka-persistence-dynamodb.version$ 
+The Akka Persistence DynamoDB plugin allows for using AWS DynamoDB as a backend for [Akka Persistence](https://doc.akka.io/libraries/akka-core/current/typed/index-persistence.html).
+
+[Documentation](https://doc.akka.io/libraries/akka-persistence-dynamodb/current/)
+
+@@dependency [Maven,sbt,Gradle] {
+    group=com.typesafe.akka
+    artifact=akka-persistence-dynamodb_$scala.binary.version$
+    version=$akka-persistence-dynamodb.version$
+}
+
 ## Akka Persistence plugin for JDBC $akka-persistence-jdbc.version$
 The Akka Persistence JDBC plugin allows for using JDBC-compliant databases as backend for [Akka Persistence](https://doc.akka.io/libraries/akka-core/current/typed/index-persistence.html) and [Akka Persistence Query](https://doc.akka.io/libraries/akka-core/current/persistence-query.html).
 
