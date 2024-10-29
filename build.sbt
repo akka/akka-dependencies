@@ -67,7 +67,7 @@ lazy val docs = project
     name := "Akka Dependencies",
     scalaVersion := Versions.Scala213,
     previewPath := (Paradox / siteSubdirName).value,
-    Paradox / siteSubdirName := s"docs/akka-dependencies/${projectInfoVersion.value}",
+    Paradox / siteSubdirName := s"libraries/akka-dependencies/${projectInfoVersion.value}",
     projectInfoVersion := (if (isSnapshot.value) "snapshot" else version.value),
     publish / skip := true,
     paradoxProperties ++= Map(
@@ -82,6 +82,7 @@ lazy val docs = project
         "akka-diagnostics.version" -> Dependencies.Versions.AkkaDiagnostics,
         "akka-projections.version" -> Dependencies.Versions.AkkaProjections,
         "akka-persistence-cassandra.version" -> Dependencies.Versions.AkkaPersistenceCassandra,
+        "akka-persistence-dynamodb.version" -> Dependencies.Versions.AkkaPersistenceDynamoDb,
         "akka-persistence-jdbc.version" -> Dependencies.Versions.AkkaPersistenceJdbc,
         "akka-persistence-r2dbc.version" -> Dependencies.Versions.AkkaPersistenceR2dbc,
         "alpakka.version" -> Dependencies.Versions.Alpakka,

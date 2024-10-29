@@ -16,6 +16,7 @@ object Dependencies {
     val AkkaProjections = "1.5.9"
     val AkkaGrpc = "2.4.4"
     val AkkaPersistenceCassandra = "1.2.1"
+    val AkkaPersistenceDynamoDb = "2.0.0"
     val AkkaPersistenceJdbc = "5.4.2"
     val AkkaPersistenceR2dbc = "1.2.6"
     val Alpakka = "8.0.0"
@@ -92,6 +93,7 @@ object Dependencies {
 
   val akkaPersistencePlugins = Seq(
     "com.typesafe.akka" %% "akka-persistence-cassandra" % AkkaPersistenceCassandra,
+    "com.typesafe.akka" %% "akka-persistence-dynamodb" % AkkaPersistenceDynamoDb,
     "com.lightbend.akka" %% "akka-persistence-jdbc" % AkkaPersistenceJdbc,
     "com.lightbend.akka" %% "akka-persistence-r2dbc" % AkkaPersistenceR2dbc)
 
