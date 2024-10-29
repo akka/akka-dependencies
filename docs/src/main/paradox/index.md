@@ -242,7 +242,7 @@ The Akka Persistence DynamoDB plugin allows for using AWS DynamoDB as a backend 
 [Documentation](https://doc.akka.io/libraries/akka-persistence-dynamodb/current/)
 
 @@dependency [Maven,sbt,Gradle] {
-    group=com.typesafe.akka
+    group=com.lightbend.akka
     artifact=akka-persistence-dynamodb_$scala.binary.version$
     version=$akka-persistence-dynamodb.version$
 }
