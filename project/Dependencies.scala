@@ -75,7 +75,10 @@ object Dependencies {
     "com.lightbend.akka.management" %% "akka-management-cluster-http" % AkkaManagement,
     "com.lightbend.akka.management" %% "akka-management-cluster-bootstrap" % AkkaManagement,
     "com.lightbend.akka.management" %% "akka-management-loglevels-logback" % AkkaManagement,
+    "com.lightbend.akka.management" %% "akka-management-loglevels-log4j2" % AkkaManagement,
+    "com.lightbend.akka.management" %% "akka-management-pki" % AkkaManagement,
     "com.lightbend.akka.management" %% "akka-lease-kubernetes" % AkkaManagement,
+    "com.lightbend.akka.management" %% "akka-rolling-update-kubernetes" % AkkaManagement,
     "com.lightbend.akka.discovery" %% "akka-discovery-kubernetes-api" % AkkaManagement)
 
   val akkaProjections = Seq(
