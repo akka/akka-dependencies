@@ -13,7 +13,7 @@ object Dependencies {
     val Akka = "2.10.0"
     val AkkaHttp = "10.7.0"
     val AkkaManagement = "1.6.0"
-    val AkkaProjections = "1.6.0"
+    val AkkaProjections = "1.6.1"
     val AkkaGrpc = "2.5.0"
     val AkkaPersistenceCassandra = "1.3.0"
     val AkkaPersistenceDynamoDb = "2.0.0"
@@ -86,6 +86,8 @@ object Dependencies {
 
   val akkaProjections = Seq(
     "com.lightbend.akka" %% "akka-projection-core" % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-dynamodb" % AkkaProjections,
+    "com.lightbend.akka" %% "akka-projection-slick" % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-eventsourced" % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-durable-state" % AkkaProjections,
     "com.lightbend.akka" %% "akka-projection-kafka" % AkkaProjections,
