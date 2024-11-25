@@ -12,7 +12,7 @@ Add a `dependencyManagement` `dependency` to your `pom.xml`:
 ```xml
     <properties>
         <!-- use latest version from https://github.com/akka/akka-dependencies/releases !--> 
-        <akka-dependencies.version>23.10.0</akka-dependencies.version>
+        <akka-dependencies.version>24.10.2</akka-dependencies.version>
     </properties>
     <repositories>
         <repository>
