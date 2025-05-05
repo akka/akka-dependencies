@@ -2,26 +2,26 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val Scala213 = "2.13.14"
+    val Scala213 = "2.13.15"
     val CrossScalaVersions = Seq(Scala213)
 
     val Scala3 = "3.3"
 
     // To update Cinnamon version, change the plugin version
     // in project/plugins.sbt
-    val AkkaDependenciesMinor = "24.10"
-    val Akka = "2.10.4"
-    val AkkaHttp = "10.7.0"
-    val AkkaManagement = "1.6.0"
-    val AkkaProjections = "1.6.12"
-    val AkkaGrpc = "2.5.4"
-    val AkkaPersistenceCassandra = "1.3.0"
-    val AkkaPersistenceDynamoDb = "2.0.5"
-    val AkkaPersistenceJdbc = "5.5.1"
-    val AkkaPersistenceR2dbc = "1.3.6"
-    val Alpakka = "9.0.1"
-    val AlpakkaKafka = "7.0.1"
-    val AkkaDiagnostics = "2.2.0"
+    val AkkaDependenciesMinor = "25.05"
+    val Akka = "2.10.5"
+    val AkkaHttp = "10.7.1"
+    val AkkaManagement = "1.6.2"
+    val AkkaProjections = "1.6.13"
+    val AkkaGrpc = "2.5.5"
+    val AkkaPersistenceCassandra = "1.3.2"
+    val AkkaPersistenceDynamoDb = "2.0.6"
+    val AkkaPersistenceJdbc = "5.5.2"
+    val AkkaPersistenceR2dbc = "1.3.7"
+    val Alpakka = "9.0.2"
+    val AlpakkaKafka = "7.0.2"
+    val AkkaDiagnostics = "2.2.1"
     val AkkaEdgeRust = "0.8.0"
   }
 
