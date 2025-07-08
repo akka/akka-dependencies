@@ -102,6 +102,7 @@ object Dependencies {
   val akkaPersistencePlugins = Seq(
     "com.typesafe.akka" %% "akka-persistence-cassandra" % AkkaPersistenceCassandra,
     "com.lightbend.akka" %% "akka-persistence-dynamodb" % AkkaPersistenceDynamoDb,
+    "com.lightbend.akka" %% "akka-persistence-dynamodb-s3-fallback-store" % AkkaPersistenceDynamoDb,
     "com.lightbend.akka" %% "akka-persistence-jdbc" % AkkaPersistenceJdbc,
     "com.lightbend.akka" %% "akka-persistence-r2dbc" % AkkaPersistenceR2dbc)
 
