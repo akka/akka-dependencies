@@ -11,10 +11,10 @@ object Dependencies {
     // in project/plugins.sbt
     val AkkaDependenciesMinor = "25.05"
     val Akka = "2.10.9"
-    val AkkaHttp = "10.7.1"
+    val AkkaHttp = "10.7.2"
     val AkkaManagement = "1.6.2"
     val AkkaProjections = "1.6.14"
-    val AkkaGrpc = "2.5.5"
+    val AkkaGrpc = "2.5.6"
     val AkkaPersistenceCassandra = "1.3.2"
     val AkkaPersistenceDynamoDb = "2.0.8"
     val AkkaPersistenceJdbc = "5.5.2"
