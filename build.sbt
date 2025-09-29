@@ -2,7 +2,7 @@ import Dependencies._
 import com.geirsson.CiReleasePlugin
 import sbtdynver.DynVerPlugin.autoImport.dynverSonatypeSnapshots
 
-ThisBuild / resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+ThisBuild / resolvers += "Akka library repository".at("https://repo.akka.io/maven/github_actions")
 ThisBuild / resolvers ++= sys.env
   .get("LIGHTBEND_COMMERCIAL_MVN")
   .map { repo =>
@@ -46,7 +46,7 @@ lazy val `akka-dependencies` =
         alpakka ++
         akkaDiagnostics ++
         telemetry,
-      resolvers += "Akka library repository".at("https://repo.akka.io/maven"),
+      resolvers += "Akka library repository".at("https://repo.akka.io/maven/github_actions"),
       // to check that all dependencies can be pulled and there are no conflicts
       libraryDependencies ++= {
         val bomDeps = bomIncludeModules.value

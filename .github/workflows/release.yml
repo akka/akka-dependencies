@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     name: Publish
-    runs-on: ubuntu-22.04
+    runs-on: Akka-Default
     steps:
       - name: Checkout
         # https://github.com/actions/checkout/releases
@@ -51,7 +51,7 @@ jobs:
 
   documentation:
     name: Documentation
-    runs-on: ubuntu-22.04
+    runs-on: Akka-Default
     if: github.event.repository.fork == false
     steps:
       - name: Checkout
