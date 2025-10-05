@@ -33,12 +33,13 @@ Akka is licensed under the Business Source License 1.1, please see [Akka License
 
 ## Repository
 
-The Akka dependencies are available from Akka's library repository. To access them there, you need to configure the URL for this repository.
+> [!TIP]
+> The Akka dependencies are available from Akka’s secure library repository. To access them you need to use a secure, tokenized URL as specified at https://account.akka.io/token.
 
 @@repository [Maven,sbt,Gradle] {
 id="akka-repository"
 name="Akka library repository"
-url="https://repo.akka.io/maven"
+url="https://repo.akka.io/{your repository token here}/secure"
 }
 
 ## Akka (core) $akka.version$  
@@ -129,14 +130,14 @@ Maven
         <repository>
           <id>akka-repository</id>
           <name>Akka library repository</name>
-          <url>https://repo.akka.io/maven</url>
+          <url>https://repo.akka.io/{your repository token here}/secure</url>
         </repository>
       </repositories>
       <pluginRepositories>
         <pluginRepository>
           <id>akka-repository</id>
           <name>Akka library repository</name>
-          <url>https://repo.akka.io/maven</url>
+          <url>https://repo.akka.io/{your repository token here}/secure</url>
         </pluginRepository>
       </pluginRepositories>
       <dependencies>
@@ -170,11 +171,11 @@ sbt
 :   @@@vars
     ```scala
     // in project/plugins.sbt:
-    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+    resolvers += "Akka library repository".at("https://repo.akka.io/{your repository token here}/secure")
     addSbtPlugin("com.lightbend.akka.grpc" % "sbt-akka-grpc" % "$akka-grpc.version$")
     //
     // in build.sbt:
-    resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+    resolvers += "Akka library repository".at("https://repo.akka.io/{your repository token here}/secure")
     enablePlugins(AkkaGrpcPlugin)
     ```
 @@@
@@ -186,7 +187,7 @@ Gradle
       repositories {
         gradlePluginPortal()
         maven {
-          url "https://repo.akka.io/maven"
+          url "https://repo.akka.io/{your repository token here}/secure"
         }
       }
     }
@@ -198,7 +199,7 @@ Gradle
     repositories {
       mavenCentral()
       maven {
-        url "https://repo.akka.io/maven"
+        url "https://repo.akka.io/{your repository token here}/secure"
       }
     }
     ```
