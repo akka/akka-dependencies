@@ -64,7 +64,7 @@ lazy val `akka-dependencies` =
 lazy val docs = project
   .enablePlugins(SitePreviewPlugin, AkkaParadoxPlugin, ParadoxSitePlugin, PublishRsyncPlugin)
   .settings(
-    name := "Akka Dependencies",
+    name := "Akka library dependencies",
     scalaVersion := Versions.Scala213,
     previewPath := (Paradox / siteSubdirName).value,
     Paradox / siteSubdirName := s"libraries/akka-dependencies/${projectInfoVersion.value}",

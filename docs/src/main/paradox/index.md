@@ -1,11 +1,11 @@
-# Akka module versions $akka-dependencies.major-version$
+# Akka library versions $akka-dependencies.major-version$
 
-This table lists all Akka modules that are part of the Akka $akka-dependencies.major-version$ release along with their current versions.
+This table lists all Akka libraries that are part of the Akka $akka-dependencies.major-version$ release along with their current versions.
 
 Akka $akka-dependencies.version$ is cross-built for Scala $akka-scala-2.13.version$ and Scala $akka-scala-3.version$. 
 Akka is certified for use with certain Java versions, see @ref[Java Versions](java-versions.md).
 
-Some modules in Akka do not live up to the high standards we require to fully support them for Akka Licensees. Modules are marked with their @ref[readiness level](support-terminology.md) in the "project info" section of their documentation.
+Some libraries in Akka do not live up to the high standards we require to fully support them for Akka Licensees. Libraries are marked with their @ref[readiness level](support-terminology.md) in the "project info" section of their documentation.
 
 Akka is licensed under the Business Source License 1.1, please see [Akka License FAQ](https://www.lightbend.com/akka/license-faq).
 
@@ -47,7 +47,7 @@ At the core of Akka: A model for concurrency and distribution without all the pa
 
 [Documentation](https://doc.akka.io/libraries/akka-core/current/) [JavaDoc](https://doc.akka.io/japi/akka/current/index.html) [ScalaDoc](https://doc.akka.io/api/akka/current/akka/) [Migration guides](https://doc.akka.io/libraries/akka-core/current/project/migration-guides.html)
 
-#### Complete dependency listing of Akka core modules
+#### Complete dependency listing of Akka core libraries
 
 Check the [documentation](https://doc.akka.io/libraries/akka-core/current/) to learn which dependencies you require. 
 
@@ -206,13 +206,13 @@ Gradle
 @@@
 
 ## Akka HTTP $akka-http.version$ 
-The Akka HTTP modules implement a full server- and client-side HTTP stack on top of Akka Actors and Akka Streams.
+The Akka HTTP libraries implement a full server- and client-side HTTP stack on top of Akka Actors and Akka Streams.
 
 [Documentation](https://doc.akka.io/libraries/akka-http/current/) [Predefined Directives](https://doc.akka.io/libraries/akka-http/current/routing-dsl/directives/alphabetically.html) [Migration guides](https://doc.akka.io/libraries/akka-http/current/migration-guide/index.html)
 
 [JavaDoc](https://doc.akka.io/japi/akka-http/current/) [ScalaDoc](https://doc.akka.io/api/akka-http/current/akka/http/scaladsl/index.html)
 
-#### Complete dependency listing of Akka HTTP modules
+#### Complete dependency listing of Akka HTTP libraries
 
 Check the [documentation](https://doc.akka.io/libraries/akka-http/current/) to learn which dependencies you require.
 
@@ -288,7 +288,7 @@ Akka Management is a suite of tools for operating Akka Clusters.
 
 [Documentation](https://doc.akka.io/libraries/akka-management/current/) [Migration guides](https://doc.akka.io/libraries/akka-management/current/migration.html)
 
-#### Complete dependency listing of Akka Management modules
+#### Complete dependency listing of Akka Management libraries
 
 Check the [documentation](https://doc.akka.io/libraries/akka-management/current/) to learn which dependencies you require.
 
