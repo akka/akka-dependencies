@@ -7,7 +7,7 @@ Akka is certified for use with certain Java versions, see @ref[Java Versions](ja
 
 Some libraries in Akka do not live up to the high standards we require to fully support them for Akka Licensees. Libraries are marked with their @ref[readiness level](support-terminology.md) in the "project info" section of their documentation.
 
-Akka is licensed under the Business Source License 1.1, please see [Akka License FAQ](https://www.lightbend.com/akka/license-faq).
+Akka is licensed under the Business Source License 1.1, please see [Akka License FAQ](https://akka.io/bsl-license-faq).
 
 | Module                                | Current version                      | Documentation                                                                                                                                                                                                                                                                                                          |
 |---------------------------------------|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
