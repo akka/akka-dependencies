@@ -1,6 +1,6 @@
 # Release
 
-This repository will release to https://repo.akka.io/maven.
+This repository will release to the Akka repository (accessible via token from https://account.akka.io/token).
 
 1. Check the `AkkaDependenciesMinor` version in `project/Dependencies.scala`
 1. To initiate a release push a tag prefixed with `v`, i.e. `v22.10.0`.
