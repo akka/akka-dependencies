@@ -67,6 +67,9 @@ jobs:
         with:
           jvm: temurin:1.17
 
+      - name: Setup global resolver
+        uses: akka/github-actions-scripts/setup_global_resolver@main
+
       - name: Publish
         run: |-
           eval "$(ssh-agent -s)"
