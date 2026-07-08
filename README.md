@@ -28,7 +28,7 @@ Add a `dependencyManagement` `dependency` to your `pom.xml`:
         <repository>
             <id>akka-repository</id>
             <name>Akka library repository</name>
-            <url>https://repo.akka.io/maven</url>
+            <url><url from https://account.akka.io/token></url>
         </repository>
     </repositories>
     <dependencyManagement>

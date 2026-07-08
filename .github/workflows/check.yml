@@ -30,6 +30,9 @@ jobs:
         # https://github.com/coursier/cache-action/releases
         uses: coursier/cache-action@v8.1.0
 
+      - name: Setup global resolver
+        uses: akka/github-actions-scripts/setup_global_resolver@main
+
       - name: Check scalafmt rules, publish BOM locally
         run: sbt checkBom
 

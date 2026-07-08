@@ -1,5 +1,3 @@
-resolvers += "Akka library repository".at("https://repo.akka.io/maven/github_actions")
-
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.2")
 addSbtPlugin("com.lightbend.sbt" % "sbt-bill-of-materials" % "1.0.2")
 addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.5.12")

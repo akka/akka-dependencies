@@ -28,6 +28,9 @@ jobs:
           jvm: temurin:1.17
           apps: cs
 
+      - name: Setup global resolver
+        uses: akka/github-actions-scripts/setup_global_resolver@main
+
       - name: sbt site
         run: sbt docs/makeSite
 

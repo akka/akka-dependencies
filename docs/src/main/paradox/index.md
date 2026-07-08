@@ -39,7 +39,7 @@ Akka is licensed under the Business Source License 1.1, please see [Akka License
 @@repository [Maven,sbt,Gradle] {
 id="akka-repository"
 name="Akka library repository"
-url="https://repo.akka.io/{your repository token here}/secure"
+url="<url from https://account.akka.io/token>"
 }
 
 ## Akka (core) $akka.version$  
@@ -130,14 +130,14 @@ Maven
         <repository>
           <id>akka-repository</id>
           <name>Akka library repository</name>
-          <url>https://repo.akka.io/{your repository token here}/secure</url>
+          <url><url from https://account.akka.io/token></url>
         </repository>
       </repositories>
       <pluginRepositories>
         <pluginRepository>
           <id>akka-repository</id>
           <name>Akka library repository</name>
-          <url>https://repo.akka.io/{your repository token here}/secure</url>
+          <url><url from https://account.akka.io/token></url>
         </pluginRepository>
       </pluginRepositories>
       <dependencies>
@@ -171,11 +171,11 @@ sbt
 :   @@@vars
     ```scala
     // in project/plugins.sbt:
-    resolvers += "Akka library repository".at("https://repo.akka.io/{your repository token here}/secure")
+    resolvers += "Akka library repository".at("<url from https://account.akka.io/token>")
     addSbtPlugin("com.lightbend.akka.grpc" % "sbt-akka-grpc" % "$akka-grpc.version$")
     //
     // in build.sbt:
-    resolvers += "Akka library repository".at("https://repo.akka.io/{your repository token here}/secure")
+    resolvers += "Akka library repository".at("<url from https://account.akka.io/token>")
     enablePlugins(AkkaGrpcPlugin)
     ```
 @@@
@@ -187,7 +187,7 @@ Gradle
       repositories {
         gradlePluginPortal()
         maven {
-          url "https://repo.akka.io/{your repository token here}/secure"
+          url "<url from https://account.akka.io/token>"
         }
       }
     }
@@ -199,7 +199,7 @@ Gradle
     repositories {
       mavenCentral()
       maven {
-        url "https://repo.akka.io/{your repository token here}/secure"
+        url "<url from https://account.akka.io/token>"
       }
     }
     ```
