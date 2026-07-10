@@ -9,10 +9,10 @@ The platform consists of
 
 The **Akka SDK** and **Akka Automated Operations** are built upon the foundational [**Akka libraries**](https://doc.akka.io/libraries/akka-dependencies/current/), providing the building blocks for distributed systems.
 
-Akka Dependencies
-=================
+Akka Library Dependencies
+=========================
 
-Akka Dependencies is a Maven bill of materials (BOM) that can be referenced to make it easier to reference compatible versions of Akka components in a project.
+Akka Dependencies is a Maven bill of materials (BOM) that can be referenced to make it easier to reference compatible versions of Akka libraries in a project.
 For a full list of included dependencies see the [`Dependencies`](./project/Dependencies.scala) file.
 
 Usage: 
