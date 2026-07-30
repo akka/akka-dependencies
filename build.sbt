@@ -17,6 +17,7 @@ lazy val `akka-dependencies` =
     .disablePlugins(CiReleasePlugin)
     .settings(
       crossScalaVersions := Versions.CrossScalaVersions,
+      crossVersion := CrossVersion.disabled,
       scalaVersion := Versions.Scala213,
       organization := "com.lightbend.akka",
       name := "akka-dependencies",
