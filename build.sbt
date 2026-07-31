@@ -49,12 +49,18 @@ lazy val `akka-dependencies` =
       // to check that all dependencies can be pulled and there are no conflicts
       libraryDependencies ++= {
         val bomDeps = bomIncludeModules.value
-        if (sys.env.contains("LIGHTBEND_COMMERCIAL_MVN")) {
-          bomDeps
-        } else {
-          // Run the validation for at least the non-commercial dependencies
-          bomDeps.filterNot(allCommercialLibs.contains)
-        }
+        val deps =
+          if (sys.env.contains("LIGHTBEND_COMMERCIAL_MVN")) {
+            bomDeps
+          } else {
+            // Run the validation for at least the non-commercial dependencies
+            bomDeps.filterNot(allCommercialLibs.contains)
+          }
+        // cinnamon-opentracing-datadog hardcodes a dependency on jackson-module-scala_2.13, which
+        // collides with jackson-module-scala_3 (from akka-serialization-jackson) when resolving the
+        // Scala 3 cross-build. Skip it in this resolution check only; it stays in the published BOM
+        // because bomIncludeModules is unchanged.
+        deps.filterNot(m => m.organization == "com.lightbend.cinnamon" && m.name == "cinnamon-opentracing-datadog")
       },
       publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true),
       publishM2Configuration := publishM2Configuration.value.withOverwrite(true))
