@@ -2,7 +2,7 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val Scala213 = "2.13.17"
+    val Scala213 = "2.13.18"
     val Scala3 = "3.3.7"
     val CrossScalaVersions = Seq(Scala213, Scala3)
 
@@ -17,7 +17,7 @@ object Dependencies {
     val AkkaPersistenceCassandra = "1.3.5"
     val AkkaPersistenceDynamoDb = "2.0.13"
     val AkkaPersistenceJdbc = "5.5.5"
-    val AkkaPersistenceR2dbc = "1.3.15"
+    val AkkaPersistenceR2dbc = "1.3.16"
     val Alpakka = "10.0.4"
     val AlpakkaKafka = "8.0.2"
     val AkkaDiagnostics = "2.2.3"
