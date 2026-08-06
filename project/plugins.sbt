@@ -1,7 +1,7 @@
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.2")
 addSbtPlugin("com.lightbend.sbt" % "sbt-bill-of-materials" % "1.1.1")
 addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.5.12")
-addSbtPlugin("com.lightbend.cinnamon" % "sbt-cinnamon" % "2.22.3")
+addSbtPlugin("com.lightbend.cinnamon" % "sbt-cinnamon" % "2.22.4")
 // docs
 addSbtPlugin("io.akka" % "sbt-paradox-akka" % "25.10.2")
 addSbtPlugin("com.lightbend.sbt" % "sbt-publish-rsync" % "0.3")
