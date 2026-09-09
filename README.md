@@ -22,7 +22,7 @@ Add a `dependencyManagement` `dependency` to your `pom.xml`:
 ```xml
     <properties>
         <!-- use latest version from https://github.com/akka/akka-dependencies/releases !--> 
-        <akka-dependencies.version>24.10.2</akka-dependencies.version>
+        <akka-dependencies.version>25.10.15</akka-dependencies.version>
     </properties>
     <repositories>
         <repository>
@@ -35,7 +35,7 @@ Add a `dependencyManagement` `dependency` to your `pom.xml`:
         <dependencies>
             <dependency>
                 <groupId>com.lightbend.akka</groupId>
-                <artifactId>akka-dependencies_2.13</artifactId>
+                <artifactId>akka-dependencies</artifactId> <!-- for BOM versions before 25.10.11, use `akka-dependencies_2.13` here !-->
                 <version>${akka-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
