@@ -36,13 +36,12 @@ Akka is licensed under the Business Source License 1.1, please see [Akka License
 
 ## Repository
 
-> [!TIP]
-> The Akka dependencies are available from Akka’s secure library repository. To access them you need to use a secure, tokenized URL as specified at https://account.akka.io/token.
+> **TIP:** The Akka dependencies are available from Akka’s secure library repository. To access them you need to use a secure, tokenized URL as specified at https://account.akka.io/token.
 
 @@repository [Maven,sbt,Gradle] {
 id="akka-repository"
 name="Akka library repository"
-url="<url from https://account.akka.io/token>"
+url="&lt;url from https://account.akka.io/token&gt;"
 }
 
 ## Akka (core) $akka.version$  
