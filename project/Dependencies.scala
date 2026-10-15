@@ -13,7 +13,7 @@ object Dependencies {
     val AkkaHttp = "10.7.6"
     val AkkaManagement = "1.6.5"
     val AkkaProjections = "1.6.25"
-    val AkkaGrpc = "2.5.12"
+    val AkkaGrpc = "2.5.13"
     val AkkaPersistenceCassandra = "1.3.5"
     val AkkaPersistenceDynamoDb = "2.0.14"
     val AkkaPersistenceJdbc = "5.5.5"
