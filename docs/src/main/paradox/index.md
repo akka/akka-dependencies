@@ -6,7 +6,6 @@ This table lists all Akka libraries that are part of the Akka $akka-dependencies
 
 Akka $akka-dependencies.version$ is cross-built for Scala $akka-scala-2.13.version$ and Scala $akka-scala-3.version$. 
 Akka is certified for use with certain Java versions, see @ref[Java Versions](java-versions.md).
-See @ref[Known issues](known-issues.md) for a Scala 3 conflict between Lightbend Telemetry and Jackson, and how to work around it.
 
 Some libraries in Akka do not live up to the high standards we require to fully support them for Akka Licensees. Libraries are marked with their @ref[readiness level](support-terminology.md) in the "project info" section of their documentation.
 
@@ -359,7 +358,8 @@ Akka Edge support in Rust is designed to empower Akka developers at the edge. Re
 
 | Akka                   | Compatible Akka Insights         |                                                                              |
 |------------------------|----------------------------------|------------------------------------------------------------------------------|
-| Akka 25.10             | Akka Insights version 2.22       | [**Documentation**](https://doc.akka.io/libraries/akka-insights/current/)        |
+| Akka 26.11             | Akka Insights version 2.23       | [**Documentation**](https://doc.akka.io/libraries/akka-insights/current/)        |
+| Akka 25.10             | Akka Insights version 2.22       | [**Documentation**](https://doc.akka.io/libraries/akka-insights/2.22/home.html)  |
 | Akka 25.05             | Akka Insights version 2.21       | [**Documentation**](https://doc.akka.io/libraries/akka-insights/2.21/home.html)  |
 | Akka 24.10             | Akka Insights version 2.21       | [**Documentation**](https://doc.akka.io/libraries/akka-insights/2.21/home.html)  |
 | Akka 24.05             | Lightbend Telemetry version 2.20 | [**Documentation**](https://doc.akka.io/libraries/akka-insights/2.20/home.html)  |
@@ -390,6 +390,5 @@ Move your endpoints to the edge of the cloud for lower latency and higher availa
 * [overview](overview.md)
 * [java-version](java-versions.md)
 * [support-terminology](support-terminology.md)
-* [known-issues](known-issues.md)
 
 @@@
