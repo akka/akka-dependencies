@@ -39,6 +39,12 @@
                                     <excludes>
                                         <!-- the Cassandra driver's slf4j-api 1.7, the logging backend of the application brings slf4j-api 2 -->
                                         <exclude>org.slf4j:slf4j-api</exclude>
+                                        <!-- the Cassandra driver's config 1.4.1, fixed in https://github.com/akka/akka-persistence-cassandra/pull/1207 -->
+                                        <exclude>com.typesafe:config</exclude>
+                                        <!-- the Cassandra driver's reactive-streams 1.0.3, fixed in https://github.com/akka/akka-persistence-cassandra/pull/1207 -->
+                                        <exclude>org.reactivestreams:reactive-streams</exclude>
+                                        <!-- akka-persistence-cassandra's java-driver-core 4.19.3, fixed in https://github.com/akka/akka-persistence-cassandra/pull/1207 -->
+                                        <exclude>org.apache.cassandra:java-driver-core</exclude>
                                     </excludes>
                                 </requireUpperBoundDeps>
                             </rules>
