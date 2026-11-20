@@ -38,3 +38,48 @@ jobs:
 
       - name: Check dependencies can be pulled
         run: sbt update
+
+  maven-tests:
+    name: Maven tests
+    runs-on: Akka-Default
+    steps:
+      - name: Checkout
+        # https://github.com/actions/checkout/releases
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout GitHub merge
+        if: github.event.pull_request
+        run: |-
+          git fetch origin pull/${{ github.event.pull_request.number }}/merge:scratch
+          git checkout scratch
+
+      - name: Set up JDK 17
+        # https://github.com/coursier/setup-action/releases
+        uses: coursier/setup-action@v3.0.0
+        with:
+          jvm: temurin:1.17
+
+      - name: Cache Coursier cache
+        # https://github.com/coursier/cache-action/releases
+        uses: coursier/cache-action@v8.1.0
+
+      - name: Setup global resolver
+        uses: akka/github-actions-scripts/setup_global_resolver@main
+        with:
+          maven-mirror-control: "NO_MIRROR"
+
+      - name: Gather version
+        run: |-
+          sbt --no-colors "print akka-dependencies/version" | tail -n 1 | tr -d '[:space:]' > ~/.version
+          echo [$(cat ~/.version)]
+
+      - name: Publish BOM locally
+        run: sbt "akka-dependencies / BillOfMaterials / publishM2"
+
+      - name: Maven test
+        # checks the dependencies that Maven resolves through the BOM, and starts an ActorSystem with each library
+        run: |-
+          cd maven-tests
+          mvn -B -nsu -ntp test -Dakka-dependencies.version=`cat ~/.version`
