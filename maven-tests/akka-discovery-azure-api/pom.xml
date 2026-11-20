@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lightbend.akka</groupId>
+        <artifactId>akka-dependencies-maven-tests</artifactId>
+        <version>1.0</version>
+    </parent>
+    <artifactId>akka-dependencies-maven-tests-akka-discovery-azure-api</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lightbend.akka.discovery</groupId>
+            <artifactId>akka-discovery-azure-api_${scala.binary.version}</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce</id>
+                        <configuration>
+                            <rules>
+                                <requireUpperBoundDeps>
+                                    <excludes>
+                                        <!-- within the Azure SDK -->
+                                        <exclude>net.java.dev.jna:jna</exclude>
+                                        <!-- within the Azure SDK -->
+                                        <exclude>org.jspecify:jspecify</exclude>
+                                    </excludes>
+                                </requireUpperBoundDeps>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!-- the reference.conf of akka-discovery-azure-api requires them -->
+                    <environmentVariables>
+                        <AZURE_CLIENT_ID>x</AZURE_CLIENT_ID>
+                        <AZURE_TENANT_ID>x</AZURE_TENANT_ID>
+                        <KUBERNETES_SERVICE_HOST>localhost</KUBERNETES_SERVICE_HOST>
+                        <KUBERNETES_SERVICE_PORT>443</KUBERNETES_SERVICE_PORT>
+                    </environmentVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
